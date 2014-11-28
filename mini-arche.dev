@@ -49,7 +49,7 @@ AutoIncBuildNr=0
 <<<<<<< HEAD
 
 [Unit1]
-FileName=main.cpp
+FileName=Modele\Etudiant.cpp
 CompileCpp=1
 Folder=Modele
 =======
@@ -60,7 +60,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=Modele\Etudiant.cpp
+FileName=Modele\Professeur.cpp
 CompileCpp=1
 Folder=Modele
 >>>>>>> a6a23a3f4d9ed25c5c29a109eeee53fdd7a4605d
@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=Modele\Professeur.cpp
+FileName=Modele\main.cpp
 CompileCpp=1
 Folder=Modele
 Compile=1
