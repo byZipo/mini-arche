@@ -20,7 +20,7 @@ ObjectOutput=
 OverrideOutput=0
 OverrideOutputName=
 HostApplication=
-Folders=
+Folders=Modele
 CommandLine=
 UseCustomMakefile=0
 CustomMakefile=
@@ -28,16 +28,6 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=
-
-[Unit1]
-FileName=main.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
 
 [VersionInfo]
 Major=0
@@ -56,4 +46,14 @@ OriginalFilename=
 ProductName=
 ProductVersion=
 AutoIncBuildNr=0
+
+[Unit1]
+FileName=main.cpp
+CompileCpp=1
+Folder=Modele
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
 
