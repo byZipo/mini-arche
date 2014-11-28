@@ -1,8 +1,14 @@
 [Editor_0]
 <<<<<<< HEAD
-CursorCol=36
-CursorRow=65
+<<<<<<< HEAD
+CursorCol=1
+CursorRow=71
 TopLine=54
+=======
+CursorCol=23
+CursorRow=88
+TopLine=53
+>>>>>>> 08bda51bd3aaddfcc16e690952dcdbffa7984ae6
 LeftChar=1
 Open=1
 Top=1
