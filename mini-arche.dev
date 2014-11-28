@@ -1,7 +1,7 @@
 [Project]
 FileName=mini-arche.dev
 Name=mini-arche
-UnitCount=1
+UnitCount=2
 Type=0
 Ver=1
 ObjFiles=
@@ -47,10 +47,17 @@ ProductName=
 ProductVersion=
 AutoIncBuildNr=0
 
+<<<<<<< HEAD
 [Unit1]
 FileName=main.cpp
 CompileCpp=1
 Folder=Modele
+=======
+[Unit2]
+FileName=Etudiant.cpp
+CompileCpp=1
+Folder=
+>>>>>>> a6a23a3f4d9ed25c5c29a109eeee53fdd7a4605d
 Compile=1
 Link=1
 Priority=1000
