@@ -1,8 +1,8 @@
 [Editor_0]
 <<<<<<< HEAD
-CursorCol=15
-CursorRow=89
-TopLine=53
+CursorCol=36
+CursorRow=65
+TopLine=54
 LeftChar=1
 Open=1
 Top=1
@@ -20,3 +20,8 @@ Top=1
 Focused=0
 Order=0
 >>>>>>> 879bb134aa5cd726a0f280201318890331730656
+[Editor_1]
+CursorCol=1
+CursorRow=1
+TopLine=1
+LeftChar=1
