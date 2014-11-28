@@ -81,7 +81,7 @@ FileName=Modele\Professeur.cpp
 FileName=Modele\main.cpp
 >>>>>>> 7dc7bc38a92f2c73b660647202962210e2a2f6a2
 CompileCpp=1
-Folder=
+Folder=Modele
 Compile=1
 Link=1
 Priority=1000
