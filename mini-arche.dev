@@ -60,9 +60,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=Etudiant.cpp
+FileName=Modele\Etudiant.cpp
 CompileCpp=1
-Folder=
+Folder=Modele
 >>>>>>> a6a23a3f4d9ed25c5c29a109eeee53fdd7a4605d
 Compile=1
 Link=1
@@ -71,7 +71,11 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
+<<<<<<< HEAD
 FileName=Prof.cpp
+=======
+FileName=Modele\Professeur.cpp
+>>>>>>> e803b83e3500d4640ba124db9d39bec668c98a65
 CompileCpp=1
 Folder=
 Compile=1
