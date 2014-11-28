@@ -1,7 +1,7 @@
 [Project]
 FileName=mini-arche.dev
 Name=mini-arche
-UnitCount=4
+UnitCount=3
 Type=0
 Ver=1
 ObjFiles=
@@ -71,19 +71,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=Modele\Etudiant.cpp
+FileName=Prof.cpp
 CompileCpp=1
-Folder=Modele
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit4]
-FileName=Modele\Professeur.cpp
-CompileCpp=1
-Folder=Modele
+Folder=
 Compile=1
 Link=1
 Priority=1000

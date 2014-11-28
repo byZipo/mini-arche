@@ -5,8 +5,8 @@ CPP  = g++.exe
 CC   = gcc.exe
 WINDRES = windres.exe
 RES  = 
-OBJ  = main.o $(RES)
-LINKOBJ  = main.o $(RES)
+OBJ  = main.o Etudiant.o Prof.o $(RES)
+LINKOBJ  = main.o Etudiant.o Prof.o $(RES)
 LIBS =  -mwindows  
 INCS = 
 CXXINCS = 
@@ -28,3 +28,9 @@ $(BIN): $(OBJ)
 
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Etudiant.o: Etudiant.cpp
+	$(CPP) -c Etudiant.cpp -o Etudiant.o $(CXXFLAGS)
+
+Prof.o: Prof.cpp
+	$(CPP) -c Prof.cpp -o Prof.o $(CXXFLAGS)
