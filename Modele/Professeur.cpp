@@ -1,9 +1,9 @@
 /* je suis un prof */
-class Professeur(){
+class Professeur{
       
       
       
       
       
-}
+};
 
