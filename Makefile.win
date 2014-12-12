@@ -5,8 +5,8 @@ CPP  = g++.exe
 CC   = gcc.exe
 WINDRES = windres.exe
 RES  = 
-OBJ  = Modele/Etudiant.o Modele/Professeur.o Modele/main.o $(RES)
-LINKOBJ  = Modele/Etudiant.o Modele/Professeur.o Modele/main.o $(RES)
+OBJ  = Modele/Etudiant.o Modele/Professeur.o Modele/main.o Cours.o Ressource.o $(RES)
+LINKOBJ  = Modele/Etudiant.o Modele/Professeur.o Modele/main.o Cours.o Ressource.o $(RES)
 LIBS =  -mwindows  
 INCS = 
 CXXINCS = 
@@ -34,3 +34,9 @@ Modele/Professeur.o: Modele/Professeur.cpp
 
 Modele/main.o: Modele/main.cpp
 	$(CPP) -c Modele/main.cpp -o Modele/main.o $(CXXFLAGS)
+
+Cours.o: Cours.cpp
+	$(CPP) -c Cours.cpp -o Cours.o $(CXXFLAGS)
+
+Ressource.o: Ressource.cpp
+	$(CPP) -c Ressource.cpp -o Ressource.o $(CXXFLAGS)
