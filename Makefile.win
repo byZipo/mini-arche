@@ -5,8 +5,8 @@ CPP  = g++.exe
 CC   = gcc.exe
 WINDRES = windres.exe
 RES  = 
-OBJ  = main.o Etudiant.o Prof.o $(RES)
-LINKOBJ  = main.o Etudiant.o Prof.o $(RES)
+OBJ  = Modele/Etudiant.o Modele/Professeur.o Modele/main.o $(RES)
+LINKOBJ  = Modele/Etudiant.o Modele/Professeur.o Modele/main.o $(RES)
 LIBS =  -mwindows  
 INCS = 
 CXXINCS = 
@@ -26,11 +26,11 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o "mini-arche.exe" $(LIBS)
 
-main.o: main.cpp
-	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+Modele/Etudiant.o: Modele/Etudiant.cpp
+	$(CPP) -c Modele/Etudiant.cpp -o Modele/Etudiant.o $(CXXFLAGS)
 
-Etudiant.o: Etudiant.cpp
-	$(CPP) -c Etudiant.cpp -o Etudiant.o $(CXXFLAGS)
+Modele/Professeur.o: Modele/Professeur.cpp
+	$(CPP) -c Modele/Professeur.cpp -o Modele/Professeur.o $(CXXFLAGS)
 
-Prof.o: Prof.cpp
-	$(CPP) -c Prof.cpp -o Prof.o $(CXXFLAGS)
+Modele/main.o: Modele/main.cpp
+	$(CPP) -c Modele/main.cpp -o Modele/main.o $(CXXFLAGS)
