@@ -2,7 +2,7 @@
 #include <iostream> // pour std::cout 
 #include <string>   // pour std::string 
 
-
+using namespace std;
 class Etudiant {
 
       std::string nom;
