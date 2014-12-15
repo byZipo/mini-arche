@@ -1,12 +1,12 @@
 #include "stdafx.h"
 #include <iostream> // pour std::cout 
 #include <string>   // pour std::string 
+#ifndef PERSONNE_H
+#define PERSONNE_H
 
 
 
 class Personne{
-
-	Personne();
 	std::string nom;
 	std::string prenom;
 
@@ -18,3 +18,5 @@ class Personne{
 
 	void setPrenom(std::string chaine);
 };
+
+#endif

@@ -1,11 +1,12 @@
 #include "stdafx.h"
 #include <iostream> // pour std::cout 
 #include <string>   // pour std::string
-#include "Personne.h"
+#include <list>
 
 
+class Cours{
 
-class Etudiant : public Personne{
 
+	void addEtudiantListePrincipale(Etudiant e);
 
 };

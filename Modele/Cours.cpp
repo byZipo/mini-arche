@@ -6,16 +6,21 @@
 #include <list>
 #include "Professeur.h"
 #include "Etudiant.h"
+#include "Cours.h"
 
 using namespace std;
 
-class cours{
 
 //std::list<Ressource> ressources;
 std::list<Etudiant> listeattente;
-std::list<Etudiant> listeprincipal;
+std::list<Etudiant> listeprincipale;
 	Professeur prof;
 
 
+	void addEtudiantListePrincipale(Etudiant e){
+		listeprincipale.push_back(e);
 
-};     
+	}
+
+
+

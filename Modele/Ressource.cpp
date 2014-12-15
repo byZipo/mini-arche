@@ -3,7 +3,9 @@
 
 class Ressource{
       
-      
+	int note;
+
+
       
       
       
