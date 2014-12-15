@@ -2,7 +2,7 @@
 #include <iostream> // pour std::cout 
 #include <string>   // pour std::string
 #include <list>
-
+#include "Etudiant.h"
 
 class Cours{
 
