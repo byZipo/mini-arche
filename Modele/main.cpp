@@ -1,93 +1,182 @@
-#include <windows.h>
+// Win32Project1.cpp : définit le point d'entrée pour l'application.
+//
 
-/*  Declare Windows procedure  */
-LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
+#include "stdafx.h"
+#include "Win32Project1.h"
 
-/*  Make the class name into a global variable  */
-char szClassName[ ] = "WindowsApp";
+#define MAX_LOADSTRING 100
 
-int WINAPI WinMain (HINSTANCE hThisInstance,
-                    HINSTANCE hPrevInstance,
-                    LPSTR lpszArgument,
-                    int nFunsterStil)
+// Variables globales :
+HINSTANCE hInst;								// instance actuelle
+TCHAR szTitle[MAX_LOADSTRING];					// Le texte de la barre de titre
+TCHAR szWindowClass[MAX_LOADSTRING];			// le nom de la classe de fenêtre principale
 
+// Pré-déclarations des fonctions incluses dans ce module de code :
+ATOM				MyRegisterClass(HINSTANCE hInstance);
+BOOL				InitInstance(HINSTANCE, int);
+LRESULT CALLBACK	WndProc(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
+
+int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
+                     _In_opt_ HINSTANCE hPrevInstance,
+                     _In_ LPTSTR    lpCmdLine,
+                     _In_ int       nCmdShow)
 {
-    HWND hwnd;               /* This is the handle for our window */
-    MSG messages;            /* Here messages to the application are saved */
-    WNDCLASSEX wincl;        /* Data structure for the windowclass */
+	UNREFERENCED_PARAMETER(hPrevInstance);
+	UNREFERENCED_PARAMETER(lpCmdLine);
 
-    /* The Window structure */
-    wincl.hInstance = hThisInstance;
-    wincl.lpszClassName = szClassName;
-    wincl.lpfnWndProc = WindowProcedure;      /* This function is called by windows */
-    wincl.style = CS_DBLCLKS;                 /* Catch double-clicks */
-    wincl.cbSize = sizeof (WNDCLASSEX);
+ 	// TODO: placez ici le code.
+	MSG msg;
+	HACCEL hAccelTable;
 
-    /* Use default icon and mouse-pointer */
-    wincl.hIcon = LoadIcon (NULL, IDI_APPLICATION);
-    wincl.hIconSm = LoadIcon (NULL, IDI_APPLICATION);
-    wincl.hCursor = LoadCursor (NULL, IDC_ARROW);
-    wincl.lpszMenuName = NULL;                 /* No menu */
-    wincl.cbClsExtra = 0;                      /* No extra bytes after the window class */
-    wincl.cbWndExtra = 0;                      /* structure or the window instance */
-    /* Use Windows's default color as the background of the window */
-    wincl.hbrBackground = (HBRUSH) COLOR_BACKGROUND;
+	// Initialise les chaînes globales
+	LoadString(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
+	LoadString(hInstance, IDC_WIN32PROJECT1, szWindowClass, MAX_LOADSTRING);
+	MyRegisterClass(hInstance);
 
-    /* Register the window class, and if it fails quit the program */
-    if (!RegisterClassEx (&wincl))
-        return 0;
+	// Effectue l'initialisation de l'application :
+	if (!InitInstance (hInstance, nCmdShow))
+	{
+		return FALSE;
+	}
 
-    /* The class is registered, let's create the program*/
-    hwnd = CreateWindowEx (
-           0,                   /* Extended possibilites for variation */
-           szClassName,         /* Classname */
-           "Windows App",       /* Title Text */
-           WS_OVERLAPPEDWINDOW, /* default window */
-           CW_USEDEFAULT,       /* Windows decides the position */
-           CW_USEDEFAULT,       /* where the window ends up on the screen */
-           544,                 /* The programs width */
-           375,                 /* and height in pixels */
-           HWND_DESKTOP,        /* The window is a child-window to desktop */
-           NULL,                /* No menu */
-           hThisInstance,       /* Program Instance handler */
-           NULL                 /* No Window Creation data */
-           );
+	hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_WIN32PROJECT1));
 
-    /* Make the window visible on the screen */
-    ShowWindow (hwnd, nFunsterStil);
+	// Boucle de messages principale :
+	while (GetMessage(&msg, NULL, 0, 0))
+	{
+		if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+		{
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
+	}
 
-    /* Run the message loop. It will run until GetMessage() returns 0 */
-    while (GetMessage (&messages, NULL, 0, 0))
-    {
-        /* Translate virtual-key messages into character messages */
-        TranslateMessage(&messages);
-        /* Send message to WindowProcedure */
-        DispatchMessage(&messages);
-    }
-
-    /* The program return-value is 0 - The value that PostQuitMessage() gave */
-    return messages.wParam;
+	return (int) msg.wParam;
 }
 
 
-/*  This function is called by the Windows function DispatchMessage()  */
 
-LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+//
+//  FONCTION : MyRegisterClass()
+//
+//  BUT : inscrit la classe de fenêtre.
+//
+ATOM MyRegisterClass(HINSTANCE hInstance)
 {
-    switch (message)                  /* handle the messages */
-    {
-        case WM_DESTROY:
-            PostQuitMessage (0);       /* send a WM_QUIT to the message queue */
-            break;
-        default:                      /* for messages that we don't deal with */
-            return DefWindowProc (hwnd, message, wParam, lParam);
-    }
+	WNDCLASSEX wcex;
 
-    return 0;
+	wcex.cbSize = sizeof(WNDCLASSEX);
+
+	wcex.style			= CS_HREDRAW | CS_VREDRAW;
+	wcex.lpfnWndProc	= WndProc;
+	wcex.cbClsExtra		= 0;
+	wcex.cbWndExtra		= 0;
+	wcex.hInstance		= hInstance;
+	wcex.hIcon			= LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WIN32PROJECT1));
+	wcex.hCursor		= LoadCursor(NULL, IDC_ARROW);
+	wcex.hbrBackground	= (HBRUSH)(COLOR_WINDOW+1);
+	wcex.lpszMenuName	= MAKEINTRESOURCE(IDC_WIN32PROJECT1);
+	wcex.lpszClassName	= szWindowClass;
+	wcex.hIconSm		= LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
+
+	return RegisterClassEx(&wcex);
 }
 
+//
+//   FONCTION : InitInstance(HINSTANCE, int)
+//
+//   BUT : enregistre le handle de l'instance et crée une fenêtre principale
+//
+//   COMMENTAIRES :
+//
+//        Dans cette fonction, nous enregistrons le handle de l'instance dans une variable globale, puis
+//        créons et affichons la fenêtre principale du programme.
+//
+BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
+{
+   HWND hWnd;
 
-/* message de tibo */ 
-/* et Adrien*/
-/* Aurélien */
+   hInst = hInstance; // Stocke le handle d'instance dans la variable globale
 
+   hWnd = CreateWindow(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, NULL, NULL, hInstance, NULL);
+
+   if (!hWnd)
+   {
+      return FALSE;
+   }
+
+   ShowWindow(hWnd, nCmdShow);
+   UpdateWindow(hWnd);
+
+   return TRUE;
+}
+
+//
+//  FONCTION : WndProc(HWND, UINT, WPARAM, LPARAM)
+//
+//  BUT :  traite les messages pour la fenêtre principale.
+//
+//  WM_COMMAND	- traite le menu de l'application
+//  WM_PAINT	- dessine la fenêtre principale
+//  WM_DESTROY	- génère un message d'arrêt et retourne
+//
+//
+LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	int wmId, wmEvent;
+	PAINTSTRUCT ps;
+	HDC hdc;
+
+	switch (message)
+	{
+	case WM_COMMAND:
+		wmId    = LOWORD(wParam);
+		wmEvent = HIWORD(wParam);
+		// Analyse les sélections de menu :
+		switch (wmId)
+		{
+		case IDM_ABOUT:
+			DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+			break;
+		case IDM_EXIT:
+			DestroyWindow(hWnd);
+			break;
+		default:
+			return DefWindowProc(hWnd, message, wParam, lParam);
+		}
+		break;
+	case WM_PAINT:
+		hdc = BeginPaint(hWnd, &ps);
+		// TODO: ajoutez ici le code de dessin...
+		EndPaint(hWnd, &ps);
+		break;
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		break;
+	default:
+		return DefWindowProc(hWnd, message, wParam, lParam);
+	}
+	return 0;
+}
+
+// Gestionnaire de messages pour la boîte de dialogue À propos de.
+INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	UNREFERENCED_PARAMETER(lParam);
+	switch (message)
+	{
+	case WM_INITDIALOG:
+		return (INT_PTR)TRUE;
+
+	case WM_COMMAND:
+		if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
+		{
+			EndDialog(hDlg, LOWORD(wParam));
+			return (INT_PTR)TRUE;
+		}
+		break;
+	}
+	return (INT_PTR)FALSE;
+}
