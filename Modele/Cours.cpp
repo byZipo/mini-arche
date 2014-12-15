@@ -16,7 +16,7 @@ std::list<Etudiant> listeattente;
 std::list<Etudiant> listeprincipale;
 	Professeur *prof = new Professeur();
 
-	void addEtudiantListePrincipale(Etudiant e){
+	void Cours::addEtudiantListePrincipale(Etudiant e){
 		listeprincipale.push_back(e);
 
 	}
