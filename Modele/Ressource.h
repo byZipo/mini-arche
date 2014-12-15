@@ -5,9 +5,10 @@
 #define RESSOURCE_H
 
 class Ressource{
+private :
 	int note;
 	bool publication;
-
+public :
 	bool contientnote();
 
 	bool estpubliee();

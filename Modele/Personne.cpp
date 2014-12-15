@@ -8,19 +8,19 @@
 	std::string nom;
 	std::string prenom;
 
-	std::string getNom(){
+	std::string Personne::getNom(){
 		return nom;
 	}
 
-	void setNom(std::string chaine){
+	void Personne::setNom(std::string chaine){
 		nom = chaine;
 	}
 
-	std::string getPrenom(){
+	std::string Personne::getPrenom(){
 		return prenom;
 	}
 
-	void setPrenom(std::string chaine){
+	void Personne::setPrenom(std::string chaine){
 		prenom = chaine;
 	}
 

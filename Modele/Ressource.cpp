@@ -6,7 +6,7 @@
 	int note;
 	bool publication;
 
-	bool contientnote(){
+	bool Ressource::contientnote(){
 
 		if (note){
 			return true;
@@ -15,16 +15,16 @@
 		}
 	}
 
-	bool estpubliee(){
+	bool Ressource::estpubliee(){
 		return publication;
 	}
 
     
-	int getNote(){
+	int Ressource::getNote(){
 		return note;
 	}
      
-	void setNote(int newnote){
+	void Ressource::setNote(int newnote){
 		note = newnote;
 	}
       
