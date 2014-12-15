@@ -14,8 +14,7 @@ using namespace std;
 //std::list<Ressource> ressources;
 std::list<Etudiant> listeattente;
 std::list<Etudiant> listeprincipale;
-	Professeur prof;
-
+	Professeur *prof = new Professeur();
 
 	void addEtudiantListePrincipale(Etudiant e){
 		listeprincipale.push_back(e);

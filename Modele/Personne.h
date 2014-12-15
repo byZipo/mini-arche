@@ -7,10 +7,12 @@
 
 
 class Personne{
+private :
 	std::string nom;
 	std::string prenom;
 
 	std::string getNom();
+public :
 
 	void setNom(std::string chaine);
 
