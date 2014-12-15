@@ -6,6 +6,7 @@
 
 
 class Devoir : public Cours{
-
-
+public :
+	std::string chemin;
+	std::string nom;
 };

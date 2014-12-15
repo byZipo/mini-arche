@@ -7,5 +7,3 @@
 
 using namespace std;
 
-string chemin;
-string nom;

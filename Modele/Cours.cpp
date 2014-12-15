@@ -7,7 +7,8 @@
 #include "Professeur.h"
 #include "Etudiant.h"
 #include "Cours.h"
-
+#ifndef COURS_H
+#define COURS_H
 using namespace std;
 
 
@@ -22,4 +23,5 @@ std::list<Etudiant> listeprincipale;
 	}
 
 
+#endif
 

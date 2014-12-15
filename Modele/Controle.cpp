@@ -11,6 +11,6 @@ string chemin;
 string nom; 
 
 
-list questions
-list repinses
-list choix
+//list questions
+//list repinses
+//list choix
