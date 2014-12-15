@@ -24,8 +24,4 @@ using namespace std;
            prenom = chaine;
       }
 
-	  //Âurélien
-
-
-
 
