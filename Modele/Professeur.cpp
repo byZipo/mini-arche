@@ -5,16 +5,6 @@
 #include "Professeur.h"
 using namespace std;
 
-std::string nom;
-
-	string getNom(){
-		return nom;
-	}
-
-	void setNom(std::string chaine){
-		nom = chaine;
-	}
-
       
       
       
