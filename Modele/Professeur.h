@@ -2,14 +2,9 @@
 #include "stdafx.h"
 #include <iostream> // pour std::cout 
 #include <string>   // pour std::string 
-#include "Professeur.h"
-using namespace std;
-
-      
- 
-      
-      
+#include "Personne.h"
 
 
-
-
+class Professeur: public Personne{
+	
+};

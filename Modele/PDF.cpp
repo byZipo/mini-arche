@@ -1,15 +1,12 @@
-/* je suis un prof */
 #include "stdafx.h"
 #include <iostream> // pour std::cout 
 #include <string>   // pour std::string 
-#include "Professeur.h"
+#include "PDF.h"
+
+
+
 using namespace std;
 
-      
- 
-      
-      
-
-
-
+string chemin;
+string nom;
 
