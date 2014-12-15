@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include <iostream> // pour std::cout 
 #include <string>   // pour std::string 
+#include "Etudiant.h"
 
 using namespace std;
-class Etudiant {
 
       std::string nom;
       std::string prenom;
@@ -23,7 +23,6 @@ class Etudiant {
       void setPrenom(std::string chaine){
            prenom = chaine;
       }
-};
 
 
 

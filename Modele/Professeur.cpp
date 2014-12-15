@@ -5,11 +5,7 @@
 #include "Professeur.h"
 using namespace std;
 
-class Professeur {
-
-public :
-	string nom;
-	string prenom;
+std::string nom;
 
 	string getNom(){
 		return nom;
@@ -23,7 +19,7 @@ public :
       
       
       
-};
+
 
 
 
