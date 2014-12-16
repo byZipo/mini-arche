@@ -5,8 +5,6 @@
 #include "Personne.h"
 
 
-	std::string nom;
-	std::string prenom;
 
 	std::string Personne::getNom(){
 		return nom;

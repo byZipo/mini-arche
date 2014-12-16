@@ -7,7 +7,8 @@
 #include "Professeur.h"
 #include "Etudiant.h"
 #include "Cours.h"
-
+#ifndef COURS_H
+#define COURS_H
 using namespace std;
 
 
@@ -18,8 +19,11 @@ std::list<Etudiant> listeprincipale;
 
 	void Cours::addEtudiantListePrincipale(Etudiant e){
 		listeprincipale.push_back(e);
+		cout << "Ajout d'un etudiant" << endl;
+		cout << "Taille de la liste listeprincipale= " << listeprincipale.size() << "\n" << endl;
 
 	}
 
 
+#endif
 

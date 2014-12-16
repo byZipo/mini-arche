@@ -7,6 +7,7 @@
 class Cours{
 
 public :
+
 	void addEtudiantListePrincipale(Etudiant e);
 
 };
