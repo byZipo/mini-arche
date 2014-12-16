@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "mini-arche.h"
+#include "Test1.h"
 
 
 #define MAX_LOADSTRING 100
