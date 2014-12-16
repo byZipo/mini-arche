@@ -11,9 +11,9 @@ private :
 	std::string nom;
 	std::string prenom;
 
-	
-public :
 	std::string getNom();
+public :
+
 	void setNom(std::string chaine);
 
 	std::string getPrenom();

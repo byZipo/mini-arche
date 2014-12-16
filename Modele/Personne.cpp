@@ -4,6 +4,7 @@
 #include <string>   // pour std::string 
 #include "Personne.h"
 
+using namespace std;
 
 
 	std::string Personne::getNom(){
@@ -20,5 +21,6 @@
 
 	void Personne::setPrenom(std::string chaine){
 		prenom = chaine;
+		cout << "setPrenom("<< prenom <<")\n" << endl;
 	}
 

@@ -14,6 +14,7 @@ int main(){
 	c1->getEtudiant(0).setPrenom("Adrien");
 	cout << "Le prenom est :" << endl;
 	c1->getEtudiant(0).getPrenom();
+	cout << "\n" << endl;
 
 	system("PAUSE");
 	return(0);
