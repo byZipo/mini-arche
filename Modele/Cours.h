@@ -20,6 +20,7 @@ public :
 	void addEtudiantListePrincipale(Etudiant e);
 	void addEtudiantListeAttente(Etudiant e);
 	Etudiant getEtudiant(int i);
+	string getNomCours();
 
 private:
 	

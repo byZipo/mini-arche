@@ -27,3 +27,7 @@ void Cours::addEtudiantListeAttente(Etudiant e){
 Etudiant Cours::getEtudiant(int i){
 	return listeprincipale.at(i);
 }
+
+string Cours::getNomCours(){
+	return nomC;
+}
