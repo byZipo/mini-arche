@@ -2,8 +2,8 @@
 #define COURS_H
 
 #include "stdafx.h"
-#include <iostream> // pour std::cout 
-#include <string>   // pour std::string
+#include <iostream>
+#include <vector>
 #include <list>
 #include "Etudiant.h"
 
@@ -14,8 +14,12 @@ class Cours{
 
 public :
 
+	//std::list<Ressource> ressources;
+	vector<Etudiant> listeattente;
+	vector<Etudiant> listeprincipale;
 	void addEtudiantListePrincipale(Etudiant e);
 	void addEtudiantListeAttente(Etudiant e);
+	Etudiant getEtudiant(unsigned i);
 
 private:
 	
