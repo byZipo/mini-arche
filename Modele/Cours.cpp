@@ -21,9 +21,13 @@ std::list<Etudiant> listeprincipale;
 		listeprincipale.push_back(e);
 		cout << "Ajout d'un etudiant" << endl;
 		cout << "Taille de la liste listeprincipale= " << listeprincipale.size() << "\n" << endl;
-
 	}
 
+	void Cours::addEtudiantListeAttente(Etudiant e){
+		listeattente.push_back(e);
+		cout << "Ajout d'un etudiant" << endl;
+		cout << "Taille de la liste listeattente= " << listeattente.size() << "\n" << endl;
+	}
 
 #endif
 
