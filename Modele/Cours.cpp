@@ -24,6 +24,6 @@ void Cours::addEtudiantListeAttente(Etudiant e){
 	cout << "Taille de la liste listeattente= " << listeattente.size() << "\n" << endl;
 }
 
-Etudiant Cours::getEtudiant(unsigned i){
-	return listeprincipale[i];
+Etudiant Cours::getEtudiant(int i){
+	return listeprincipale.at(i);
 }

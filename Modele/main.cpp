@@ -9,11 +9,14 @@ int main(){
 
 	Cours *c1 = new Cours();
 	Etudiant *e1 = new Etudiant();
+
+	e1->setPrenom("Adrien");
 	c1->addEtudiantListePrincipale(*e1);
 
-	c1->getEtudiant(0).setPrenom("Adrien");
+	
+
 	cout << "Le prenom est :" << endl;
-	c1->getEtudiant(0).getPrenom();
+	cout << c1->getEtudiant(0).getPrenom() << endl;
 	cout << "\n" << endl;
 
 	system("PAUSE");

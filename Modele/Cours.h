@@ -19,7 +19,7 @@ public :
 	vector<Etudiant> listeprincipale;
 	void addEtudiantListePrincipale(Etudiant e);
 	void addEtudiantListeAttente(Etudiant e);
-	Etudiant getEtudiant(unsigned i);
+	Etudiant getEtudiant(int i);
 
 private:
 	
