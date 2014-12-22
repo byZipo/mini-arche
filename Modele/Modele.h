@@ -3,6 +3,7 @@
 #include <string>   // pour std::string 
 #include "Etudiant.h"
 #include "Cours.h"
+#include "Professeur.h"
 #ifndef MODELE_H
 #define MODELE_H
 #include "shellapi.h"
@@ -14,7 +15,8 @@ class Modele {
 private :
 
 	vector<Cours> listecours;
-
+	vector<Etudiant> etudiants;
+	vector<Professeur> profs;
 
 public :
 
@@ -24,6 +26,11 @@ public :
 	bool Modele::verifPDFValide(string chemin, string nom);
 	bool Modele::verifDevoirValide(string chemin, string nom);
 	bool Modele::ListePrincipaleDisponible(Cours c);
+	Professeur Modele::getProfesseur(string nom, string prenom);
+	Etudiant Modele::getEtudiant(string nom, string prenom);
+	bool Modele::estProfesseur();
+	void supprimerCours(Cours c);
+
 };
 
 #endif

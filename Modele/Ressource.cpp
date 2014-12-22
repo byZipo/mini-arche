@@ -27,6 +27,9 @@
 	void Ressource::setNote(int newnote){
 		note = newnote;
 	}
-      
+     
+	void Ressource::setPublie(){
+		publication = true;
+	}
       
 

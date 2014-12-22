@@ -46,6 +46,35 @@ bool Modele::verifUrlValide(string url){
 
 }
 
+void Modele::supprimerCours(Cours c){
+	//int i = listecours.find_if(c);
+	//listecours.erase(listecours.begin() + i);
+}
+
+Professeur Modele::getProfesseur(string nom, string prenom){
+	for (int i = 0; i<profs.size(); i++){
+		if (profs.at(i).getNom() == nom && profs.at(i).getPrenom() == prenom){
+			return profs.at(i);
+			
+		}
+	}
+
+}
+
+bool Modele::estProfesseur(){
+	// Tester si est un prof ou est un eleve ou existe pas
+
+}
+Etudiant Modele::getEtudiant(string nom, string prenom){
+	for (int i = 0; i<etudiants.size(); i++){
+		if (etudiants.at(i).getNom() == nom && etudiants.at(i).getPrenom() == prenom){
+			return etudiants.at(i);
+
+		}
+	}
+
+}
+
 bool Modele::ListePrincipaleDisponible(Cours c){
 	if (c.getMaxEtudiant() > c.getTailleListePrincipale()){
 		return true;
@@ -61,3 +90,4 @@ bool Modele::verifPDFValide(string chemin, string nom){
 
 
 }
+

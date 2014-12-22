@@ -13,7 +13,7 @@ public :
 
 	bool estpubliee();
 
-
+	void setPublie();
 	int getNote();
 
 	void setNote(int newnote);

@@ -37,9 +37,6 @@ int Cours::getTailleListePrincipale(){
 }
 
 
-void supprimerCours(Cours c){
-
-}
 
 void Cours::addRessources(Ressource r){
 	ressources.push_back(r);
