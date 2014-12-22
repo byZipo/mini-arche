@@ -7,7 +7,7 @@
 #include "Professeur.h"
 #include "Etudiant.h"
 #include "Cours.h"
-
+#include "Ressource.h"
 using namespace std;
 
 Professeur *prof = new Professeur();
@@ -28,6 +28,26 @@ Etudiant Cours::getEtudiant(int i){
 	return listeprincipale.at(i);
 }
 
+
+int Cours::getMaxEtudiant(){
+	return nbEtuMax;
+}
+int Cours::getTailleListePrincipale(){
+	return listeprincipale.size();
+}
+
+
+void supprimerCours(Cours c){
+
+}
+
+void Cours::addRessources(Ressource r){
+	ressources.push_back(r);
+	cout << "Ajout d'une ressource" << endl;
+	cout << "Taille de la liste des ressources= " << ressources.size() << "\n" << endl;
+}
 string Cours::getNomCours(){
 	return nomC;
 }
+
+

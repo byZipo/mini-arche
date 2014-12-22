@@ -3,7 +3,7 @@
 #include <string>   // pour std::string
 #include "Cours.h"
 
-class URL : public Cours{
+class PDF : public Cours{
 private:
 	std::string chemin;
 	std::string nom;
