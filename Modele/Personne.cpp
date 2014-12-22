@@ -21,6 +21,6 @@ using namespace std;
 
 	void Personne::setPrenom(std::string chaine){
 		prenom = chaine;
-		cout << "setPrenom("<< prenom <<")\n" << endl;
+		
 	}
 

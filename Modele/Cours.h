@@ -14,8 +14,6 @@ class Cours{
 
 public :
 
-	//Méthode du diagramme de classe :
-
 	//std::list<Ressource> ressources;
 	vector<Etudiant> listeattente;
 	vector<Etudiant> listeprincipale;
@@ -23,12 +21,6 @@ public :
 	void addEtudiantListeAttente(Etudiant e);
 	Etudiant getEtudiant(int i);
 	string getNomCours();
-	void suppEtudiantListeAttente(Etudiant e);
-
-	//Méthode pour test :
-
-	void afficherListeAttente();
-	void afficherListePrincipale();
 
 private:
 	
