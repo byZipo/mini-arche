@@ -1,9 +1,15 @@
+#ifndef DEVOIR_H
+#define DEVOIR_H
+
+//Librairies
 #include "stdafx.h"
-#include <iostream> // pour std::cout 
-#include <string>   // pour std::string
+#include <iostream>
+#include <string>
+
+//Nos classes
 #include "Ressource.h"
 
-
+using namespace std;
 
 class Devoir : public Ressource{
 
@@ -13,3 +19,5 @@ private :
 	std::string chemin;
 	std::string nom;
 };
+
+#endif;

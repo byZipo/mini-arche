@@ -1,26 +1,19 @@
-
-#include "stdafx.h"
-#include <iostream> // pour std::cout 
-#include <string>   // pour std::string 
 #include "Personne.h"
 
 using namespace std;
 
+string Personne::getNom(){
+	return nom;
+}
 
-	std::string Personne::getNom(){
-		return nom;
-	}
+void Personne::setNom(string chaine){
+	nom = chaine;
+}
 
-	void Personne::setNom(std::string chaine){
-		nom = chaine;
-	}
+string Personne::getPrenom(){
+	return prenom;
+}
 
-	std::string Personne::getPrenom(){
-		return prenom;
-	}
-
-	void Personne::setPrenom(std::string chaine){
-		prenom = chaine;
-		
-	}
-
+void Personne::setPrenom(string chaine){
+	prenom = chaine;	
+}

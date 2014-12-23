@@ -1,10 +1,15 @@
-#include "stdafx.h"
-#include <iostream> // pour std::cout 
-#include <string>   // pour std::string
-#include "Personne.h"
 #ifndef ETUDIANT_H
 #define ETUDIANT_H
 
+//Libraires
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+//Nos classes
+#include "Personne.h"
+
+using namespace std;
 
 class Etudiant : public Personne{
 

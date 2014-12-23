@@ -1,10 +1,18 @@
-/* je suis un prof */
+#ifndef PROFESSEUR_H
+#define PROFESSEUR_H
+
+//Libraires
 #include "stdafx.h"
-#include <iostream> // pour std::cout 
-#include <string>   // pour std::string 
+#include <iostream>
+#include <string>
+
+//Nos classes
 #include "Personne.h"
 
+using namespace std;
 
 class Professeur: public Personne{
 	
 };
+
+#endif

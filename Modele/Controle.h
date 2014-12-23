@@ -1,18 +1,29 @@
+#ifndef CONTROLE_H
+#define CONTROLE_H
+
+//Librairies
 #include "stdafx.h"
-#include <iostream> // pour std::cout 
-#include <string>   // pour std::string
-#include "Ressource.h"
+#include <iostream>
+#include <string>
 #include <vector>
+
+//Nos classes
+#include "Ressource.h"
+#include "Devoir.h"
+
+using namespace std;
 
 class Controle : public Ressource{
 
 
 public:
-	virtual std::string getType();
+	virtual string getType();
 private:
-	std::string chemin;
-	std::string nom;
-	std::vector<std::string> listequestions;
-	std::vector<std::string> listeprincipale;
-	std::vector<std::string> listechoix;
+	string chemin;
+	string nom;
+	vector<std::string> listequestions;
+	vector<std::string> listeprincipale;
+	vector<std::string> listechoix;
 }; 
+
+#endif

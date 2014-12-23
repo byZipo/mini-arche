@@ -1,8 +1,6 @@
 #include "Modele.h"
 
-
 using namespace std;
-
 
 void Modele::getListeCours(){
 	printf("Les cours disponible sur Arche sont :\n");
@@ -18,8 +16,6 @@ Cours Modele::getCoursAt(int i){
 void Modele::ajouterCours(Cours cours){
 	listeCours.push_back(cours);
 }
-
-
 
 bool Modele::estDisponible(string nom){
 	bool dispo = true;
@@ -104,7 +100,6 @@ bool Modele::ListePrincipaleDisponible(Cours c){
 
 }
 
-
 string Modele::donneExtension(string str){
 	string str1;
 	int size = str.size();
@@ -115,7 +110,6 @@ string Modele::donneExtension(string str){
 	}
 	return str1;
 }
-
 
 bool Modele::verifPDFValide(string chemin){
 
@@ -141,4 +135,3 @@ bool Modele::verifDevoirValide(string chemin){
 		return true;
 	}
 }
-

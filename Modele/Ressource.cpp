@@ -1,45 +1,40 @@
-
-#include "stdafx.h"
 #include "Ressource.h"
-#include <iostream>
 
 using namespace std;
-	int note;
-	bool publication;
 
-	bool Ressource::contientnote(){
+int note;
+bool publication;
 
-		if (note){
-			return true;
-		}else{
-			return false;
-		}
+bool Ressource::contientnote(){
+	if (note){
+		return true;
 	}
-
-	bool Ressource::estpubliee(){
-		return publication;
+	else{
+		return false;
 	}
+}
 
-	string Ressource::getNom(){
+bool Ressource::estpubliee(){
+	return publication;
+}
 
-		return nom;
-	}
+string Ressource::getNom(){
+	return nom;
+}
 
-	string Ressource::getType(){
-		type = "RES";
-		return type;
-	}
-	int Ressource::getNote(){
-		return note;
-	}
+string Ressource::getType(){
+	type = "RES";
+	return type;
+}
+
+int Ressource::getNote(){
+	return note;
+}
      
-	void Ressource::setNote(int newnote){
-		note = newnote;
-	}
+void Ressource::setNote(int newnote){
+	note = newnote;
+}
      
-	void Ressource::setPublie(){
-		publication = true;
-	}
-      
-
-#endif
+void Ressource::setPublie(){
+	publication = true;
+}

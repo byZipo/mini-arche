@@ -1,22 +1,29 @@
-#include "stdafx.h"
-#include <iostream> // pour std::cout 
-#include <string>   // pour std::string 
 #ifndef RESSOURCE_H
 #define RESSOURCE_H
+
+//Librairies
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+//Nos classes
+
+
+using namespace std;
 
 class Ressource{
 protected :
 	int note;
 	bool publication;
-	std::string type;
-	std::string nom;
+	string type;
+	string nom;
 public :
 	bool contientnote();
-	std::string getNom();
+	string getNom();
 	bool estpubliee();
 	void setPublie();
 	int getNote();
-	virtual std::string getType();
+	virtual string getType();
 	void setNote(int newnote);
 };
 

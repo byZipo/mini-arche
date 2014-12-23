@@ -1,24 +1,27 @@
-#include "stdafx.h"
-#include <iostream> // pour std::cout 
-#include <string>   // pour std::string 
 #ifndef PERSONNE_H
 #define PERSONNE_H
 
+//Libraires
+#include "stdafx.h"
+#include <iostream>
+#include <string>
 
+//Nos classes
+
+
+using namespace std;
 
 class Personne{
 private :
-	std::string nom;
-	std::string prenom;
+	string nom;
+	string prenom;
 
 	
 public :
-	std::string Personne::getNom();
-	void Personne::setNom(std::string chaine);
-
-	std::string Personne::getPrenom();
-
-	void Personne::setPrenom(std::string chaine);
+	string Personne::getNom();
+	void Personne::setNom(string chaine);
+	string Personne::getPrenom();
+	void Personne::setPrenom(string chaine);
 };
 
 #endif

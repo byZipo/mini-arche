@@ -1,12 +1,18 @@
 #ifndef COURS_H
 #define COURS_H
 
+//Libraires
 #include "stdafx.h"
 #include <iostream>
 #include <vector>
 #include <list>
+#include <string> 
+#include <stdlib.h>
+
+//Nos classes
 #include "Etudiant.h"
 #include "Ressource.h"
+#include "Professeur.h"
 
 using namespace std;
 

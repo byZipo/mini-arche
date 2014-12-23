@@ -1,13 +1,5 @@
-
-#include "stdafx.h"
-#include <iostream>
-#include <string> 
-#include <stdlib.h>
-#include <list>
-#include "Professeur.h"
-#include "Etudiant.h"
 #include "Cours.h"
-#include "Ressource.h"
+
 using namespace std;
 
 Professeur *prof = new Professeur();
@@ -60,11 +52,10 @@ void Cours::supprimerEtudiant(Etudiant e){
 int Cours::getMaxEtudiant(){
 	return nbEtuMax;
 }
+
 int Cours::getTailleListePrincipale(){
 	return listeprincipale.size();
 }
-
-
 
 void Cours::addRessources(Ressource r){
 	ressources.push_back(r);
@@ -90,8 +81,7 @@ void Cours::supprimerRessource(Ressource r){
 	}
 
 }
+
 string Cours::getNomCours(){
 	return nomC;
 }
-
-

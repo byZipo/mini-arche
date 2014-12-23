@@ -1,18 +1,19 @@
+#ifndef MODELE_H
+#define MODELE_H
+
+//Libraires
 #include "stdafx.h"
 #include <iostream> 
 #include <string>
-
 #include "shellapi.h"
 #include <shellapi.h>
 #include <Windows.h>
 
+//Nos classes
 #include "Etudiant.h"
 #include "Cours.h"
 #include "Professeur.h"
 #include "Ressource.h"
-
-#ifndef MODELE_H
-#define MODELE_H
 
 using namespace std;
 

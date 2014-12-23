@@ -1,15 +1,13 @@
 // Win32Project1.cpp : définit le point d'entrée pour l'application.
-//
 
-#include <iostream>
 #include "Modele.h"
-#include <string>
 
 int main(){
 	Modele *m = new Modele();
 	Cours *c = new Cours("Maths", 15);
 	Etudiant *e = new Etudiant();
-	URL *urls = new URL("www.google.fr", "google");
+	//URL *urls = new URL("www.google.fr", "google");
+
 	m->ajouterCours(*c);
 	cout << "Cours ajoute : " + c->getNomCours() + " " << endl;
 
@@ -20,8 +18,6 @@ int main(){
 
 	//cout << m->donneExtension("test.pdf") << endl;
 	//m->verifPDFValide("C:\\Users\\Coralie-ASUS\\Documents\\Diag classe.txt");
-
-	cout << "caca" << endl;
 
 	system("PAUSE");
 	return 0;
