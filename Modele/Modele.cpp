@@ -1,12 +1,5 @@
-#include "stdafx.h"
-#include <iostream> // pour std::cout 
-#include <string>   // pour std::string 
-#include "Etudiant.h"
-#include "Cours.h"
 #include "Modele.h"
-#include <shellapi.h>
-#include <Windows.h>
-#include "Ressource.h"
+
 
 using namespace std;
 
