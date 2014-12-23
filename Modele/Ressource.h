@@ -8,9 +8,10 @@ class Ressource{
 private :
 	int note;
 	bool publication;
+	//const char* type;
 public :
 	bool contientnote();
-
+	
 	bool estpubliee();
 
 	void setPublie();

@@ -34,6 +34,28 @@ Etudiant Cours::getEtudiant(int i){
 	return listeprincipale.at(i);
 }
 
+bool Cours::estMemeEtudiant(Etudiant c, Etudiant c2){
+	if (c.getNom() == c2.getNom() && c.getPrenom() == c2.getPrenom()){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
+void Cours::supprimerEtudiant(Etudiant e){
+	
+	for (int i = 0; i < listeattente.size(); i++){
+		if (estMemeEtudiant(listeattente.at(i), e)){
+			listeattente.erase(listeattente.begin() + i);
+		}
+	}
+	for (int i = 0; i < listeprincipale.size(); i++){
+		if (estMemeEtudiant(listeprincipale.at(i), e)){
+			listeprincipale.erase(listeprincipale.begin() + i);
+		}
+	}
+}
 
 int Cours::getMaxEtudiant(){
 	return nbEtuMax;
@@ -48,6 +70,25 @@ void Cours::addRessources(Ressource r){
 	ressources.push_back(r);
 	cout << "Ajout d'une ressource" << endl;
 	cout << "Taille de la liste des ressources= " << ressources.size() << "\n" << endl;
+}
+
+/*bool Cours::estMemeRessource(Ressource c, Ressource c2){
+	if (c.getNom() == c2.getNom() && c.getPrenom() == c2.getPrenom()){
+		return true;
+	}
+	else{
+		return false;
+	}
+}*/
+
+void Cours::supprimerRessource(Ressource r){
+
+	for (int i = 0; i < ressources.size(); i++){
+		//if (estMemeRessource(ressources.at(i), r)){
+			ressources.erase(ressources.begin() + i);
+		
+	}
+
 }
 string Cours::getNomCours(){
 	return nomC;

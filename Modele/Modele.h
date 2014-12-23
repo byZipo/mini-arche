@@ -31,7 +31,7 @@ public :
 	bool Modele::estProfesseur();
 	bool Modele::estMemeCours(Cours c, Cours c2);
 	void supprimerCours(Cours c);
-
+	Cours Modele::getCoursAt(int i);
 };
 
 #endif

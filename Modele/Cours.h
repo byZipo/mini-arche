@@ -24,7 +24,9 @@ public :
 	string getNomCours();
 	int getMaxEtudiant();
 	int getTailleListePrincipale();
-
+	void Cours::supprimerEtudiant(Etudiant e);
+	bool Cours::estMemeEtudiant(Etudiant e, Etudiant e1);
+	void Cours::supprimerRessource(Ressource r);
 private:
 	
 	string nomC;

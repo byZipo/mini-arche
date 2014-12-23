@@ -17,6 +17,9 @@ void Modele::ajouterCours(Cours cours){
 
 }
 
+Cours Modele::getCoursAt(int i){
+	return listecours.at(i);
+}
 
 bool Modele::estDisponible(string nom){
 	bool dispo = true;
