@@ -7,3 +7,7 @@
 
 using namespace std;
 
+string Devoir::getType(){
+	type = "DEV";
+	return type;
+}

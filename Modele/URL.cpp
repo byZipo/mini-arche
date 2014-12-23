@@ -7,6 +7,7 @@
 
 using namespace std;
 
-string url;
-
-
+string URL::getType(){
+	type = "URL";
+	return type;
+}

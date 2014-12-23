@@ -1,14 +1,18 @@
 #include "stdafx.h"
 #include <iostream> // pour std::cout 
 #include <string>   // pour std::string
-#include "Cours.h"
+#include "Ressource.h"
+#include <vector>
+
+class Controle : public Ressource{
 
 
-class Controle : public Cours{
+public:
+	virtual std::string getType();
 private:
 	std::string chemin;
 	std::string nom;
-	std::list<std::string> listequestions;
-	std::list<std::string> listeprincipale;
-	std::list<std::string> listechoix;
+	std::vector<std::string> listequestions;
+	std::vector<std::string> listeprincipale;
+	std::vector<std::string> listechoix;
 }; 

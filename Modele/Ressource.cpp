@@ -2,7 +2,7 @@
 #include "Ressource.h"
 #include <iostream>
 
-      
+using namespace std;
 	int note;
 	bool publication;
 
@@ -19,7 +19,9 @@
 		return publication;
 	}
 
-    
+	string Ressource::getType(){
+		return type;
+	}
 	int Ressource::getNote(){
 		return note;
 	}

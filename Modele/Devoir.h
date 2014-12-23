@@ -1,12 +1,15 @@
 #include "stdafx.h"
 #include <iostream> // pour std::cout 
 #include <string>   // pour std::string
-#include "Cours.h"
+#include "Ressource.h"
 
 
 
-class Devoir : public Cours{
-public :
+class Devoir : public Ressource{
+
+public:
+	virtual std::string getType();
+private :
 	std::string chemin;
 	std::string nom;
 };

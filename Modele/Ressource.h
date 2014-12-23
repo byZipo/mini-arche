@@ -5,18 +5,17 @@
 #define RESSOURCE_H
 
 class Ressource{
-private :
+protected :
 	int note;
 	bool publication;
-	//const char* type;
+	std::string type;
 public :
 	bool contientnote();
 	
 	bool estpubliee();
-
 	void setPublie();
 	int getNote();
-
+	virtual std::string getType();
 	void setNote(int newnote);
 };
 
