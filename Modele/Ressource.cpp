@@ -1,3 +1,4 @@
+
 #include "stdafx.h"
 #include "Ressource.h"
 #include <iostream>
@@ -41,3 +42,4 @@ using namespace std;
 	}
       
 
+#endif

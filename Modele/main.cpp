@@ -8,8 +8,8 @@
 int main(){
 	Modele *m = new Modele();
 	Cours *c = new Cours("Maths", 15);
-	URL *urls = new URL("www.google.fr");
-
+	Etudiant *e = new Etudiant();
+	URL *urls = new URL("www.google.fr", "google");
 	m->ajouterCours(*c);
 	cout << "Cours ajoute : " + c->getNomCours() + " " << endl;
 

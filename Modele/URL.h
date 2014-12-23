@@ -9,6 +9,7 @@ class URL : public Ressource{
 
 public:
 	virtual std::string getType();
+	URL(std::string, std::string);
 private :
 	std::string url;
 	std::string nom;
