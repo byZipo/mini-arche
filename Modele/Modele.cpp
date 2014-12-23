@@ -46,9 +46,26 @@ bool Modele::verifUrlValide(string url){
 
 }
 
+bool Modele::estMemeCours(Cours c, Cours c2){
+	if (c.getNomCours() == c2.getNomCours() && c.getMaxEtudiant() == c2.getMaxEtudiant()){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
 void Modele::supprimerCours(Cours c){
 	//int i = listecours.find_if(c);
-	//listecours.erase(listecours.begin() + i);
+	int deleted;
+	for (int i = 0; i < listecours.size(); i++){
+		if (estMemeCours(listecours.at(i), c)){
+			deleted = i;
+		}
+
+		
+	}
+	listecours.erase(listecours.begin() + deleted);
 }
 
 Professeur Modele::getProfesseur(string nom, string prenom){
@@ -63,8 +80,9 @@ Professeur Modele::getProfesseur(string nom, string prenom){
 
 bool Modele::estProfesseur(){
 	// Tester si est un prof ou est un eleve ou existe pas
-
+	return 0;
 }
+
 Etudiant Modele::getEtudiant(string nom, string prenom){
 	for (int i = 0; i<etudiants.size(); i++){
 		if (etudiants.at(i).getNom() == nom && etudiants.at(i).getPrenom() == prenom){
@@ -87,7 +105,7 @@ bool Modele::ListePrincipaleDisponible(Cours c){
 
 bool Modele::verifPDFValide(string chemin, string nom){
 
-
+	return false;
 
 }
 

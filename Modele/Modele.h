@@ -29,6 +29,7 @@ public :
 	Professeur Modele::getProfesseur(string nom, string prenom);
 	Etudiant Modele::getEtudiant(string nom, string prenom);
 	bool Modele::estProfesseur();
+	bool Modele::estMemeCours(Cours c, Cours c2);
 	void supprimerCours(Cours c);
 
 };

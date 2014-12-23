@@ -13,7 +13,7 @@ using namespace std;
 class Cours{
 
 public :
-
+	Cours(string, int);
 	vector<Ressource> ressources;
 	vector<Etudiant> listeattente;
 	vector<Etudiant> listeprincipale;

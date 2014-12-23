@@ -12,6 +12,12 @@ using namespace std;
 
 Professeur *prof = new Professeur();
 
+Cours::Cours(string nom, int nbetu){
+	this->nomC = nom;
+	this->nbEtuMax = nbetu;
+
+}
+
 void Cours::addEtudiantListePrincipale(Etudiant e){
 	listeprincipale.push_back(e);
 	cout << "Ajout d'un etudiant" << endl;

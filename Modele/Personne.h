@@ -13,12 +13,12 @@ private :
 
 	
 public :
-	std::string getNom();
-	void setNom(std::string chaine);
+	std::string Personne::getNom();
+	void Personne::setNom(std::string chaine);
 
-	std::string getPrenom();
+	std::string Personne::getPrenom();
 
-	void setPrenom(std::string chaine);
+	void Personne::setPrenom(std::string chaine);
 };
 
 #endif
