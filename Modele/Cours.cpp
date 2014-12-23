@@ -84,9 +84,9 @@ bool Cours::estMemeRessource(Ressource c, Ressource c2){
 void Cours::supprimerRessource(Ressource r){
 
 	for (unsigned i = 0; i < ressources.size(); i++){
-		//if (estMemeRessource(ressources.at(i), r)){
+		if (estMemeRessource(ressources.at(i), r)){
 			ressources.erase(ressources.begin() + i);
-		
+		}
 	}
 
 }

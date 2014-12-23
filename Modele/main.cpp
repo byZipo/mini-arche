@@ -7,7 +7,7 @@
 
 int main(){
 	Modele *m = new Modele();
-	Cours *c = new Cours("Maths", 15);
+	URL urls = new URL("www.google.fr");
 	m->ajouterCours(*c);
 	cout << "Cours ajouté : " + c->getNomCours() + " " << endl;
 
