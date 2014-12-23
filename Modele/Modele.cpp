@@ -28,8 +28,6 @@ bool Modele::estDisponible(string nom){
 }
 	
 bool Modele::verifUrlValide(string url){
-
-	
 	if (!url.empty()){
 
 		if (32 <= (long)ShellExecuteA(NULL, "open", url.c_str(), NULL, NULL, SW_SHOWNORMAL)){
@@ -42,7 +40,6 @@ bool Modele::verifUrlValide(string url){
 	else{
 		return false;
 	}
-
 }
 
 bool Modele::estMemeCours(Cours c, Cours c2){
@@ -60,9 +57,7 @@ void Modele::supprimerCours(Cours c){
 	for (unsigned i = 0; i < listeCours.size(); i++){
 		if (estMemeCours(listeCours.at(i), c)){
 			deleted = i;
-		}
-
-		
+		}	
 	}
 	listeCours.erase(listeCours.begin() + deleted);
 }
@@ -73,7 +68,6 @@ Professeur Modele::getProfesseur(string nom, string prenom){
 			return profs.at(i);
 		}
 	}
-
 }
 
 bool Modele::estProfesseur(){
@@ -87,7 +81,6 @@ Etudiant Modele::getEtudiant(string nom, string prenom){
 			return etudiants.at(i);
 		}
 	}
-
 }
 
 bool Modele::ListePrincipaleDisponible(Cours c){
@@ -97,7 +90,6 @@ bool Modele::ListePrincipaleDisponible(Cours c){
 	else{
 		return false;
 	}
-
 }
 
 string Modele::donneExtension(string str){
@@ -112,7 +104,6 @@ string Modele::donneExtension(string str){
 }
 
 bool Modele::verifPDFValide(string chemin){
-
 	if(32 >= (int)ShellExecuteA(NULL, "open", chemin.c_str(), "", NULL, SW_NORMAL)){
 		return false;
 	}
@@ -127,11 +118,15 @@ bool Modele::verifPDFValide(string chemin){
 }
 
 bool Modele::verifDevoirValide(string chemin){
-
 	if (32 >= (int)ShellExecuteA(NULL, "open", chemin.c_str(), "", NULL, SW_NORMAL)){
 		return false;
 	}
 	else{
-		return true;
+		if ((donneExtension(chemin) == "doc") || (donneExtension(chemin) == "docx") || (donneExtension(chemin) == "txt") || (donneExtension(chemin) == "odt")){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 }
