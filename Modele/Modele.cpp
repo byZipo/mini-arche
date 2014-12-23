@@ -6,25 +6,32 @@
 #include "Modele.h"
 #include <shellapi.h>
 #include <Windows.h>
+#include "Ressource.h"
 
 using namespace std;
 
 
-
-
-void Modele::ajouterCours(Cours cours){
-	Modele::listecours.push_back(cours);
-
+void Modele::getListeCours(){
+	printf("Les cours disponible sur Arche sont :\n");
+	for (unsigned i = 0; i < listeCours.size(); i++){
+		cout << getCoursAt(i).getNomCours() << endl;
+	}
 }
 
 Cours Modele::getCoursAt(int i){
-	return listecours.at(i);
+	return listeCours.at(i);
 }
+
+void Modele::ajouterCours(Cours cours){
+	listeCours.push_back(cours);
+}
+
+
 
 bool Modele::estDisponible(string nom){
 	bool dispo = true;
-	for (int i = 0; i<listecours.size(); i++){
-		if (listecours.at(i).getNomCours().compare(nom) == 0){
+	for (unsigned i = 0; i<listeCours.size(); i++){
+		if (listeCours.at(i).getNomCours().compare(nom) == 0){
 			dispo = false;
 		}
 	}
@@ -61,21 +68,20 @@ bool Modele::estMemeCours(Cours c, Cours c2){
 void Modele::supprimerCours(Cours c){
 	//int i = listecours.find_if(c);
 	int deleted;
-	for (int i = 0; i < listecours.size(); i++){
-		if (estMemeCours(listecours.at(i), c)){
+	for (unsigned i = 0; i < listeCours.size(); i++){
+		if (estMemeCours(listeCours.at(i), c)){
 			deleted = i;
 		}
 
 		
 	}
-	listecours.erase(listecours.begin() + deleted);
+	listeCours.erase(listeCours.begin() + deleted);
 }
 
 Professeur Modele::getProfesseur(string nom, string prenom){
-	for (int i = 0; i<profs.size(); i++){
+	for (unsigned i= 0; i<profs.size(); i++){
 		if (profs.at(i).getNom() == nom && profs.at(i).getPrenom() == prenom){
 			return profs.at(i);
-			
 		}
 	}
 
@@ -87,10 +93,9 @@ bool Modele::estProfesseur(){
 }
 
 Etudiant Modele::getEtudiant(string nom, string prenom){
-	for (int i = 0; i<etudiants.size(); i++){
+	for (unsigned i = 0; i<etudiants.size(); i++){
 		if (etudiants.at(i).getNom() == nom && etudiants.at(i).getPrenom() == prenom){
 			return etudiants.at(i);
-
 		}
 	}
 
@@ -106,9 +111,41 @@ bool Modele::ListePrincipaleDisponible(Cours c){
 
 }
 
-bool Modele::verifPDFValide(string chemin, string nom){
 
-	return false;
+string Modele::donneExtension(string str){
+	string str1;
+	int size = str.size();
+	for (int i = 0; i < size; i++){
+		if (str[i] == '.'){
+			str1 = str.substr(i+1, size);
+		}
+	}
+	return str1;
+}
 
+
+bool Modele::verifPDFValide(string chemin){
+
+	if(32 >= (int)ShellExecuteA(NULL, "open", chemin.c_str(), "", NULL, SW_NORMAL)){
+		return false;
+	}
+	else{
+		if(donneExtension(chemin) == "pdf"){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+}
+
+bool Modele::verifDevoirValide(string chemin){
+
+	if (32 >= (int)ShellExecuteA(NULL, "open", chemin.c_str(), "", NULL, SW_NORMAL)){
+		return false;
+	}
+	else{
+		return true;
+	}
 }
 
