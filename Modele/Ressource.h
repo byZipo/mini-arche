@@ -9,9 +9,10 @@ protected :
 	int note;
 	bool publication;
 	std::string type;
+	std::string nom;
 public :
 	bool contientnote();
-	
+	std::string getNom();
 	bool estpubliee();
 	void setPublie();
 	int getNote();

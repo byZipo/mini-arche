@@ -19,7 +19,13 @@ using namespace std;
 		return publication;
 	}
 
+	string Ressource::getNom(){
+
+		return nom;
+	}
+
 	string Ressource::getType(){
+		type = "RES";
 		return type;
 	}
 	int Ressource::getNote(){

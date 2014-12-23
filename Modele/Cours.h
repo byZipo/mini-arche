@@ -26,6 +26,7 @@ public :
 	int getTailleListePrincipale();
 	void Cours::supprimerEtudiant(Etudiant e);
 	bool Cours::estMemeEtudiant(Etudiant e, Etudiant e1);
+	bool Cours::estMemeRessource(Ressource e, Ressource e1);
 	void Cours::supprimerRessource(Ressource r);
 private:
 	

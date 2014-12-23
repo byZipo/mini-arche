@@ -72,14 +72,14 @@ void Cours::addRessources(Ressource r){
 	cout << "Taille de la liste des ressources= " << ressources.size() << "\n" << endl;
 }
 
-/*bool Cours::estMemeRessource(Ressource c, Ressource c2){
-	if (c.getNom() == c2.getNom() && c.getPrenom() == c2.getPrenom()){
+bool Cours::estMemeRessource(Ressource c, Ressource c2){
+	if (c.getType() == c2.getType() && c.getNom() == c2.getNom()){
 		return true;
 	}
 	else{
 		return false;
 	}
-}*/
+}
 
 void Cours::supprimerRessource(Ressource r){
 

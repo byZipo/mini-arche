@@ -11,5 +11,7 @@ public:
 	virtual std::string getType();
 private :
 	std::string url;
+	std::string nom;
+
 	
 };
