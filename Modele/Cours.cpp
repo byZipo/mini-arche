@@ -45,12 +45,12 @@ bool Cours::estMemeEtudiant(Etudiant c, Etudiant c2){
 
 void Cours::supprimerEtudiant(Etudiant e){
 	
-	for (int i = 0; i < listeattente.size(); i++){
+	for (unsigned i = 0; i < listeattente.size(); i++){
 		if (estMemeEtudiant(listeattente.at(i), e)){
 			listeattente.erase(listeattente.begin() + i);
 		}
 	}
-	for (int i = 0; i < listeprincipale.size(); i++){
+	for (unsigned i = 0; i < listeprincipale.size(); i++){
 		if (estMemeEtudiant(listeprincipale.at(i), e)){
 			listeprincipale.erase(listeprincipale.begin() + i);
 		}
@@ -83,7 +83,7 @@ void Cours::addRessources(Ressource r){
 
 void Cours::supprimerRessource(Ressource r){
 
-	for (int i = 0; i < ressources.size(); i++){
+	for (unsigned i = 0; i < ressources.size(); i++){
 		//if (estMemeRessource(ressources.at(i), r)){
 			ressources.erase(ressources.begin() + i);
 		
