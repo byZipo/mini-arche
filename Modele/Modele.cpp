@@ -103,30 +103,25 @@ string Modele::donneExtension(string str){
 	return str1;
 }
 
+bool Modele::existenceFichier(const string& Name){
+	ifstream f(Name.c_str());
+	return f.is_open();
+}
+
 bool Modele::verifPDFValide(string chemin){
-	if(32 >= (int)ShellExecuteA(NULL, "open", chemin.c_str(), "", NULL, SW_NORMAL)){
-		return false;
+	if ((existenceFichier(chemin)) && (donneExtension(chemin) == "pdf")){
+		return true;
 	}
 	else{
-		if(donneExtension(chemin) == "pdf"){
-			return true;
-		}
-		else{
-			return false;
-		}
+		return false;
 	}
 }
 
 bool Modele::verifDevoirValide(string chemin){
-	if (32 >= (int)ShellExecuteA(NULL, "open", chemin.c_str(), "", NULL, SW_NORMAL)){
-		return false;
+	if ((existenceFichier(chemin)) && ((donneExtension(chemin) == "txt") || (donneExtension(chemin) == "doc") || (donneExtension(chemin) == "docx") || (donneExtension(chemin) == "odt"))){
+		return true;
 	}
 	else{
-		if ((donneExtension(chemin) == "doc") || (donneExtension(chemin) == "docx") || (donneExtension(chemin) == "txt") || (donneExtension(chemin) == "odt")){
-			return true;
-		}
-		else{
-			return false;
-		}
+		return false;
 	}
 }

@@ -18,6 +18,7 @@ int main(){
 
 	//cout << m->donneExtension("test.pdf") << endl;
 	//m->verifPDFValide("C:\\Users\\Coralie-ASUS\\Documents\\Diag classe.txt");
+	cout << m->existenceFichier("C:\\Users\\Coralie-ASUS\\Documents\\doc2.txt") << endl;
 
 	system("PAUSE");
 	return 0;

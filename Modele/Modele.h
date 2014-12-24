@@ -8,6 +8,7 @@
 #include "shellapi.h"
 #include <shellapi.h>
 #include <Windows.h>
+#include <fstream>
 
 //Nos classes
 #include "Etudiant.h"
@@ -41,6 +42,7 @@ public :
 	Cours Modele::getCoursAt(int i);
 	void Modele::getListeCours();
 	string Modele::donneExtension(string str);
+	bool Modele::existenceFichier(const string& Name);
 };
 
 #endif
