@@ -13,14 +13,14 @@
 #include "Etudiant.h"
 #include "Ressource.h"
 #include "Professeur.h"
-
+#include "URL.h"
 using namespace std;
 
 class Cours{
 
 public :
 	Cours(string, int);
-	vector<Ressource> ressources;
+	vector<Ressource*> ressources;
 	vector<Etudiant> listeattente;
 	vector<Etudiant> listeprincipale;
 	void addEtudiantListePrincipale(Etudiant e);
@@ -32,8 +32,10 @@ public :
 	int getTailleListePrincipale();
 	void Cours::supprimerEtudiant(Etudiant e);
 	bool Cours::estMemeEtudiant(Etudiant e, Etudiant e1);
-	bool Cours::estMemeRessource(Ressource e, Ressource e1);
+	bool Cours::estMemeRessource(Ressource *e, Ressource *e1);
 	void Cours::supprimerRessource(Ressource r);
+	Ressource* Cours::getRessource(int i);
+	string Cours::getTypeRes(Ressource *r);
 private:
 	
 	string nomC;

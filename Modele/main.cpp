@@ -6,8 +6,9 @@ int main(){
 	Modele *m = new Modele();
 	Cours *c = new Cours("Maths", 15);
 	Etudiant *e = new Etudiant();
-	//URL *urls = new URL("www.google.fr", "google");
-
+	URL *adresse = new URL("www.google.fr", "google");
+	c->addRessources(*adresse);
+	cout << "Type : " << c->getTypeRes(c->getRessource(0)) << endl;
 	m->ajouterCours(*c);
 	cout << "Cours ajoute : " + c->getNomCours() + " " << endl;
 

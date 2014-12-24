@@ -58,13 +58,14 @@ int Cours::getTailleListePrincipale(){
 }
 
 void Cours::addRessources(Ressource r){
-	ressources.push_back(r);
+	//cout << "Type :" << this->getTypeRes(&r);
+	ressources.push_back(&r);
 	cout << "Ajout d'une ressource" << endl;
 	cout << "Taille de la liste des ressources= " << ressources.size() << "\n" << endl;
 }
 
-bool Cours::estMemeRessource(Ressource c, Ressource c2){
-	if (c.getType() == c2.getType() && c.getNom() == c2.getNom()){
+bool Cours::estMemeRessource(Ressource *c, Ressource *c2){
+	if (c->getType() == c2->getType() && c->getNom() == c2->getNom()){
 		return true;
 	}
 	else{
@@ -75,13 +76,21 @@ bool Cours::estMemeRessource(Ressource c, Ressource c2){
 void Cours::supprimerRessource(Ressource r){
 
 	for (unsigned i = 0; i < ressources.size(); i++){
-		if (estMemeRessource(ressources.at(i), r)){
+		if (estMemeRessource(ressources.at(i), &r)){
 			ressources.erase(ressources.begin() + i);
 		}
 	}
 
 }
 
+Ressource* Cours::getRessource(int i){
+	return ressources.at(i);
+
+}
+
+string Cours::getTypeRes(Ressource *r){
+	return r->getType();
+}
 string Cours::getNomCours(){
 	return nomC;
 }
