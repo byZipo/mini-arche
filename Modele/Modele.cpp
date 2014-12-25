@@ -126,7 +126,7 @@ bool Modele::verifDevoirValide(string chemin){
 	}
 }
 
-int Modele::getNbCoursEtudiant(Etudiant e){
+/*int Modele::getNbCoursEtudiant(Etudiant e){
 	int var = 0;
 	for (unsigned i = 0; i < listeCours.size(); i++){
 		for (int j = 0; j < getCoursAt(i).getTailleListePrincipale(); j++){
@@ -136,4 +136,9 @@ int Modele::getNbCoursEtudiant(Etudiant e){
 		}
 	}
 	return var;
+}*/
+
+void Modele::getNbCoursEtudiant(Etudiant e){
+	cout << getCoursAt(0).getNomCours() << endl;
+	cout << getCoursAt(0).getTailleListePrincipale() << endl;
 }
