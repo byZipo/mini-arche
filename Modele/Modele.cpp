@@ -125,3 +125,15 @@ bool Modele::verifDevoirValide(string chemin){
 		return false;
 	}
 }
+
+int Modele::getNbCoursEtudiant(Etudiant e){
+	int var = 0;
+	for (unsigned i = 0; i < listeCours.size(); i++){
+		for (int j = 0; j < getCoursAt(i).getTailleListePrincipale(); j++){
+			if (getCoursAt(i).getEtudiant(j).getNom() == e.getNom()){
+				var++;
+			}
+		}
+	}
+	return var;
+}
