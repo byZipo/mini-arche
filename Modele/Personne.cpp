@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Personne.h"
 
 using namespace std;

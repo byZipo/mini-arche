@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Controle.h"
 
 using namespace std;

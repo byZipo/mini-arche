@@ -129,24 +129,19 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 typedef struct
 {
 	TCHAR achName[MAX_PATH];
-	TCHAR achPosition[12];
-	int nGamesPlayed;
-	int nGoalsScored;
-} Player;
+	TCHAR Enseignant[12];
+	int nbEleves;
+	int placesRestantes;
+} Cours;
 
-Player Roster[] =
+Cours Roster[] =
 {
-	{ TEXT("Haas, Jonathan"), TEXT("Midfield"), 18, 4 },
-	{ TEXT("Pai, Jyothi"), TEXT("Forward"), 36, 12 },
-	{ TEXT("Hanif, Kerim"), TEXT("Back"), 26, 0 },
-	{ TEXT("Anderberg, Michael"), TEXT("Back"), 24, 2 },
-	{ TEXT("Jelitto, Jacek"), TEXT("Midfield"), 26, 3 },
-	{ TEXT("Raposo, Rui"), TEXT("Back"), 24, 3 },
-	{ TEXT("Joseph, Brad"), TEXT("Forward"), 13, 3 },
-	{ TEXT("Bouchard, Thomas"), TEXT("Forward"), 28, 5 },
-	{ TEXT("Salmre, Ivo "), TEXT("Midfield"), 27, 7 },
-	{ TEXT("Camp, David"), TEXT("Midfield"), 22, 3 },
-	{ TEXT("Kohl, Franz"), TEXT("Goalkeeper"), 17, 0 },
+	{ TEXT("Projet Synthese"), TEXT("Brigitte"), 18, 10 },
+	{ TEXT("WEB 2"), TEXT("Urso"), 36, 0 },
+	{ TEXT("RIEN"), TEXT("Tong"), 26, 5 },
+	{ TEXT("Logique"), TEXT("Loufti"), 24, 0 },
+	{ TEXT("Maths"), TEXT("Chichon"), 26, 3 },
+	{ TEXT("Système"), TEXT("Colotte"), 24, 3 },
 };
 
 
@@ -191,6 +186,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_OPTIONS_AJOUTCOURS:
 			DialogBox(hInst, MAKEINTRESOURCE(IDD_AJOUT_COURS), hWnd, About);
 			break;
+		case ID_OPTIONS_SUPPRIMERCOURS:
+			DialogBox(hInst, MAKEINTRESOURCE(IDD_DELETE_COURS), hWnd, About);
+			break;
 		case ID_CONCULTATION_VOIRSESCOURS:
 			
 			//return TRUE;
@@ -231,9 +229,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 
 
-		DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
-		EndPaint(hWnd, &ps);
-		break;
+DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+EndPaint(hWnd, &ps);
+break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		break;
@@ -248,7 +246,7 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	HWND hwndList = GetDlgItem(hDlg, IDC_LIST3);
 
-	
+
 	//UNREFERENCED_PARAMETER(lParam)
 	switch (message)
 	{
@@ -256,11 +254,15 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 		for (int i = 0; i < ARRAYSIZE(Roster); i++)
 		{
 			int pos = (int)SendMessage(hwndList, LB_ADDSTRING, 0, (LPARAM)Roster[i].achName);
+			//int prof = (int)SendMessage(hwndList, LB_ADDSTRING, 0, (LPARAM)Roster[i].Enseignant);
 			// Set the array index of the player as item data.
 			// This enables us to retrieve the item from the array
 			// even after the items are sorted by the list box.
-			SendMessage(hwndList, LB_SETITEMDATA, pos, (LPARAM)i);
+			//SendMessage(hwndList, LB_SETITEMDATA, pos, (LPARAM)i);
+
 		}
+		
+
 		// Set input focus to the list box.
 		SetFocus(hwndList);
 		return (INT_PTR)TRUE;
@@ -278,14 +280,14 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 			if (wcslen(Login) != 0 && wcslen(Pwd) != 0){
 				message1 += Login;
 				MessageBox(hDlg, message1.c_str(), L"Connexion réussie", NULL);
-				
+
 				/*if(!estUnProf())*/
 				I++;
-				
-				
+
+
 				/**/
 				EndDialog(hDlg, LOWORD(wParam));
-				
+
 			}
 			else{
 				MessageBox(hDlg, L"Veuillez renseigner votre Login / Mot de passe", L"Erreur ", NULL);
@@ -302,19 +304,72 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 			return (INT_PTR)TRUE;
 		}
 		else if (LOWORD(wParam) == IDOK_COURS){
-			wchar_t Title[128];
-			GetDlgItemText(hDlg, IDC_TITRE, Title, 50);
-			std::wstring message1 = L"Cours  ";
+			wchar_t Cours[128];
+			GetDlgItemText(hDlg, IDC_TITRE, Cours, 50);
+			std::wstring message2 = L"Cours  ";
 			/* ajouter fonction de test de l'existance du cours */
-			if (wcslen(Title) != 0){
-				message1 += Title;
-				message1 += L" ajouté !";
-				MessageBox(hDlg, message1.c_str(), L"Ajout réussi", NULL);
+			if (wcslen(Cours) != 0){
+				message2 += Cours;
+				message2 += L" ajouté !";
+				MessageBox(hDlg, message2.c_str(), L"Ajout réussi", NULL);
 				EndDialog(hDlg, LOWORD(wParam));
-				
+
 			}
 			else{
 				MessageBox(hDlg, L"Veuillez renseigner un Titre valide", L"Erreur ", NULL);
+			}
+			return (INT_PTR)TRUE;
+		}
+		else if (LOWORD(wParam) == IDC_DELETE_COURS){
+			wchar_t Title[128];
+			GetDlgItemText(hDlg, IDC_COURS_A_DELETE, Title, 50);
+			std::wstring message1 = L"Cours  ";
+			/* ajouter fonction de test de l'existance du cours */
+			bool toto = false;
+			for (int i = 0; i < ARRAYSIZE(Roster); i++)
+			{
+				if (_tcscmp(Roster[i].achName, Title) == 0){
+					toto = true;
+				}
+			}
+			if (wcslen(Title) != 0 && toto == true){
+				
+				
+				message1 += Title;
+				message1 += L" supprimé !";
+				MessageBox(hDlg, message1.c_str(), L"Suppression effectuée", NULL);
+				// Ajouter fonction de suppression dans la liste des cours 
+
+			}
+			else{
+				MessageBox(hDlg, L"Le cours saisi n'existe pas dans la liste", L"Erreur ", NULL);
+			}
+			return (INT_PTR)TRUE;
+		}
+		else if (LOWORD(wParam) == IDC_SHOW_COURS){
+			wchar_t Title[128];
+			GetDlgItemText(hDlg, IDC_COURS_TO_SHOW, Title, 50);
+			std::wstring message1 = L"Cours  ";
+			/* ajouter fonction de test de l'existance du cours */
+			bool toto = false;
+			for (int i = 0; i < ARRAYSIZE(Roster); i++)
+			{
+				if (_tcscmp(Roster[i].achName, Title) == 0){
+					toto = true;
+				}
+			}
+			if (wcslen(Title) != 0 && toto == true){
+
+
+				message1 += Title;
+				message1 += L"";
+				DialogBox(hInst, MAKEINTRESOURCE(IDD_AFF_COURS), hDlg, About);
+				//MessageBox(hDlg, message1.c_str(), L"Votre cours", NULL);
+				// Ajouter fonction de suppression dans la liste des cours 
+
+			}
+			else{
+				MessageBox(hDlg, L"Le cours saisi n'existe pas dans la liste", L"Erreur ", NULL);
 			}
 			return (INT_PTR)TRUE;
 		}

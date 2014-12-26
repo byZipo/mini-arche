@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "URL.h"
 
 using namespace std;

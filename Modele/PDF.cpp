@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "PDF.h"
 
 using namespace std;

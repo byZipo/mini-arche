@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Devoir.h"
 
 using namespace std;
