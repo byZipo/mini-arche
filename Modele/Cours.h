@@ -2,7 +2,6 @@
 #define COURS_H
 
 //Libraires
-#include "stdafx.h"
 #include <iostream>
 #include <vector>
 #include <list>

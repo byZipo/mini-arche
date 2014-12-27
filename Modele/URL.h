@@ -2,9 +2,8 @@
 #define URL_H
 
 //Libraires
-#include "stdafx.h"
-#include <iostream> // pour std::cout 
-#include <string>   // pour std::string
+#include <iostream>
+#include <string>
 
 //Nos classes
 #include "Ressource.h"

@@ -2,7 +2,6 @@
 #define ETUDIANT_H
 
 //Libraires
-#include "stdafx.h"
 #include <iostream>
 #include <string>
 #include <vector>

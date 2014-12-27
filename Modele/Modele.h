@@ -2,7 +2,6 @@
 #define MODELE_H
 
 //Libraires
-#include "stdafx.h"
 #include <iostream> 
 #include <string>
 #include "shellapi.h"

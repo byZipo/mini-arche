@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Modele.h"
 
 using namespace std;

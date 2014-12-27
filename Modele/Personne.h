@@ -2,7 +2,6 @@
 #define PERSONNE_H
 
 //Libraires
-#include "stdafx.h"
 #include <iostream>
 #include <string>
 

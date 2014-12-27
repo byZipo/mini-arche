@@ -2,7 +2,6 @@
 #define CONTROLE_H
 
 //Librairies
-#include "stdafx.h"
 #include <iostream>
 #include <string>
 #include <vector>

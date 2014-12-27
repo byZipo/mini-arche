@@ -1,5 +1,5 @@
 // Win32Project1.cpp : définit le point d'entrée pour l'application.
-
+#include "stdafx.h"
 #include "Modele.h"
 
 int main(){
