@@ -46,7 +46,7 @@ int main(){
 
 	m->getListeCoursEtudiant(*e1);
 
-
+	cout << "Nous sommes le " << m->getDateDuJour() << endl;
 	//m->supprimerCours(*c);
 	//cout << "Cours " + m->getCoursAt(0).getNomCours() + " de la liste" << endl;
 	//cout << m->donneExtension("test.pdf") << endl;

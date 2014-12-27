@@ -154,4 +154,14 @@ vector<Cours> Modele::getListeCoursEtudiant(Etudiant e){
 	return *listeCoursEtudiant;
 }
 
-
+string Modele::getDateDuJour(){
+	struct tm Today;
+	time_t maintenant = time(&maintenant);
+	localtime_s(&Today, &maintenant);
+	int d = Today.tm_mday;
+	int m = Today.tm_mon + 1;
+	int y = Today.tm_year + 1900;
+	string s = to_string(d) + "/" + to_string(m) + "/" + to_string(y);
+	return s;
+	//printf("%2.2d / %2.2d / %4.4d \n", Today.tm_mday, Today.tm_mon + 1, Today.tm_year + 1900);
+}

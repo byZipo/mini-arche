@@ -8,6 +8,8 @@
 #include <shellapi.h>
 #include <Windows.h>
 #include <fstream>
+#include <ctime>
+#include <chrono>
 
 //Nos classes
 #include "Etudiant.h"
@@ -44,6 +46,7 @@ public :
 	bool Modele::existenceFichier(const string& Name);
 	int Modele::getNbCoursEtudiant(Etudiant e);
 	vector<Cours> Modele::getListeCoursEtudiant(Etudiant e);
+	string Modele::getDateDuJour();
 };
 
 #endif
