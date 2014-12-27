@@ -42,7 +42,7 @@ public :
 	void Modele::getListeCours();
 	string Modele::donneExtension(string str);
 	bool Modele::existenceFichier(const string& Name);
-	void Modele::getNbCoursEtudiant(Etudiant e);
+	int Modele::getNbCoursEtudiant(Etudiant e);
 };
 
 #endif

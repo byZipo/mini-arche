@@ -27,20 +27,24 @@ int main(){
 
 	c1->addEtudiantListePrincipale(*e1);
 	cout << "Etudiant inscrit au cours de " << c1->getNomCours() << " : " << c1->getEtudiant(0).getPrenom() << endl;
-	cout << "Taile de la liste principale du cours de " << c1->getNomCours() << " : " << c1->getTailleListePrincipale() << endl;
+	cout << "Taile de la liste principale du cours de " << c1->getNomCours() << " : " << c1->getTailleListePrincipale() << "\n" << endl;
 
 	c2->addEtudiantListePrincipale(*e1);
 	cout << "Etudiant inscrit au cours de " << c2->getNomCours() << " : " << c2->getEtudiant(0).getPrenom() << endl;
-	cout << "Taile de la liste principale du cours de " << c2->getNomCours() << " : " << c2->getTailleListePrincipale() << endl;
+	cout << "Taile de la liste principale du cours de " << c2->getNomCours() << " : " << c2->getTailleListePrincipale() << "\n" << endl;
 
 	c3->addEtudiantListePrincipale(*e1);
 	cout << "Etudiant inscrit au cours de " << c3->getNomCours() << " : " << c3->getEtudiant(0).getPrenom() << endl;
-	cout << "Taile de la liste principale du cours de " << c3->getNomCours() << " : " << c3->getTailleListePrincipale() << endl;
+	cout << "Taile de la liste principale du cours de " << c3->getNomCours() << " : " << c3->getTailleListePrincipale() << "\n" << endl;
 
-	//Erreur dans la fonction getNbCoursEtudiant à corriger
-	//cout << "Nombre de cours ou " << e1->getPrenom() << " est inscrit(e) : " << m->getNbCoursEtudiant(*e1) << "\n" << endl;
-	m->getNbCoursEtudiant(*e1);
-	//cout << "Cours "+m->getCoursAt(0).getNomCours()+" de la liste" << endl;
+	cout << "Nombre de cours ou " << e1->getPrenom() << " est inscrit(e) : " << m->getNbCoursEtudiant(*e1) << "\n" << endl;
+
+	cout << "Suppression de l'etudiant " << e1->getPrenom() << " du cours de " << c1->getNomCours() << "\n" << endl;
+	c1->supprimerEtudiant(*e1);
+
+	cout << "Nombre de cours ou " << e1->getPrenom() << " est inscrit(e) : " << m->getNbCoursEtudiant(*e1) << "\n" << endl;
+
+	cout << "CA MARCHE BAAAAAAAAAABBBBBBBBEEEEEEEEEEEEEE !!!!!!!!!! \n" << endl;
 
 	//m->supprimerCours(*c);
 	//cout << "Cours " + m->getCoursAt(0).getNomCours() + " de la liste" << endl;
