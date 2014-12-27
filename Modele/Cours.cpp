@@ -84,6 +84,10 @@ Ressource* Cours::getRessource(int i){
 
 }
 
+vector<Ressource*> Cours::getAllRessource(){
+	return *ressources;
+}
+
 string Cours::getTypeRes(Ressource *r){
 	return r->getType();
 }

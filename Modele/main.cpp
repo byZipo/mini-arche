@@ -18,11 +18,11 @@ int main(){
 
 	m->getListeCours();
 
-	e1->setPrenom("Coralie");
+	e1->setPrenom("Coralie dit la soumise");
 	e1->setNom("DOUVILLE");
 
-	e2->setPrenom("Aurelien");
-	e2->setNom("ANDRE");
+	e2->setPrenom("Adrien dit le BOGOSS");
+	e2->setNom("JAJA");
 
 	cout << "\nTest sur l'etudiant " << e1->getPrenom() << "\n" << endl;
 

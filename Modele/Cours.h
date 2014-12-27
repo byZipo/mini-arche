@@ -35,6 +35,7 @@ public :
 	void Cours::supprimerRessource(Ressource r);
 	Ressource* Cours::getRessource(int i);
 	string Cours::getTypeRes(Ressource *r);
+	vector<Ressource*> Cours::getAllRessource();
 private:
 	
 	string nomC;

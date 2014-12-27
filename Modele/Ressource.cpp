@@ -24,7 +24,7 @@ string Ressource::getNom(){
 }
 
 string Ressource::getType(){
-	type = "RES";
+	//type = "RES";
 	return type;
 }
 
