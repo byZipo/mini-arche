@@ -79,6 +79,14 @@ void Cours::supprimerRessource(Ressource r){
 	}
 
 }
+Ressource* Cours::getRessource(int i){
+	return ressources->at(i);
+
+}
+
+string Cours::getTypeRes(Ressource *r){
+	return r->getType();
+}
 
 string Cours::getNomCours(){
 	return nomC;

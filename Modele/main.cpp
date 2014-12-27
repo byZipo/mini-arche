@@ -10,7 +10,8 @@ int main(){
 	Etudiant *e1 = new Etudiant();
 	Etudiant *e2 = new Etudiant();
 	URL *urls = new URL("www.google.fr", "google");
-
+	c1->addRessources(urls);
+	cout << "Type ressource : " << c1->getTypeRes(c1->getRessource(0)) << endl;
 	m->ajouterCours(*c1);
 	m->ajouterCours(*c2);
 	m->ajouterCours(*c3);

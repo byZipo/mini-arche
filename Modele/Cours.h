@@ -33,6 +33,8 @@ public :
 	bool Cours::estMemeEtudiant(Etudiant e, Etudiant e1);
 	bool Cours::estMemeRessource(Ressource e, Ressource e1);
 	void Cours::supprimerRessource(Ressource r);
+	Ressource* Cours::getRessource(int i);
+	string Cours::getTypeRes(Ressource *r);
 private:
 	
 	string nomC;
