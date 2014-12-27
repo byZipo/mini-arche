@@ -19,7 +19,7 @@ class Cours{
 
 public :
 	Cours(string, int);
-	vector<Ressource*> ressources;
+	vector<Ressource*> *ressources;
 	vector<Etudiant> listeattente;
 	vector<Etudiant> *listeprincipale;
 	void addEtudiantListePrincipale(Etudiant e);

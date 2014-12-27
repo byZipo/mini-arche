@@ -9,6 +9,7 @@ Cours::Cours(string nom, int nbetu){
 	this->nomC = nom;
 	this->nbEtuMax = nbetu;
 	this->listeprincipale = new vector<Etudiant>();
+	this->ressources = new vector<Ressource*>();
 }
 
 void Cours::addEtudiantListePrincipale(Etudiant e){
@@ -55,9 +56,9 @@ int Cours::getTailleListePrincipale(){
 }
 
 void Cours::addRessources(Ressource *r){
-	ressources.push_back(*r);
+	ressources->push_back(r);
 	cout << "Ajout d'une ressource" << endl;
-	cout << "Taille de la liste des ressources= " << ressources.size() << "\n" << endl;
+	cout << "Taille de la liste des ressources= " << ressources->size() << "\n" << endl;
 }
 
 bool Cours::estMemeRessource(Ressource c, Ressource c2){
@@ -71,9 +72,9 @@ bool Cours::estMemeRessource(Ressource c, Ressource c2){
 
 void Cours::supprimerRessource(Ressource r){
 
-	for (unsigned i = 0; i < ressources.size(); i++){
-		if (estMemeRessource(*ressources.at(i), r)){
-			ressources.erase(ressources.begin() + i);
+	for (unsigned i = 0; i < ressources->size(); i++){
+		if (estMemeRessource(*ressources->at(i), r)){
+			ressources->erase(ressources->begin() + i);
 		}
 	}
 
