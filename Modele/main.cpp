@@ -9,7 +9,7 @@ int main(){
 	Cours *c3 = new Cours("SVT", 16);
 	Etudiant *e1 = new Etudiant();
 	Etudiant *e2 = new Etudiant();
-	//URL *urls = new URL("www.google.fr", "google");
+	URL *urls = new URL("www.google.fr", "google");
 
 	m->ajouterCours(*c1);
 	m->ajouterCours(*c2);

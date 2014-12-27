@@ -16,7 +16,7 @@
 #include "Cours.h"
 #include "Professeur.h"
 #include "Ressource.h"
-
+#include "URL.h"
 using namespace std;
 
 class Modele {

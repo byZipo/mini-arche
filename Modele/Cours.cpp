@@ -54,8 +54,8 @@ int Cours::getTailleListePrincipale(){
 	return listeprincipale->size();
 }
 
-void Cours::addRessources(Ressource r){
-	ressources.push_back(r);
+void Cours::addRessources(Ressource *r){
+	ressources.push_back(*r);
 	cout << "Ajout d'une ressource" << endl;
 	cout << "Taille de la liste des ressources= " << ressources.size() << "\n" << endl;
 }
@@ -72,7 +72,7 @@ bool Cours::estMemeRessource(Ressource c, Ressource c2){
 void Cours::supprimerRessource(Ressource r){
 
 	for (unsigned i = 0; i < ressources.size(); i++){
-		if (estMemeRessource(ressources.at(i), r)){
+		if (estMemeRessource(*ressources.at(i), r)){
 			ressources.erase(ressources.begin() + i);
 		}
 	}
