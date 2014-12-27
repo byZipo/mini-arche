@@ -139,7 +139,19 @@ int Modele::getNbCoursEtudiant(Etudiant e){
 	return var;
 }
 
-/*void Modele::getNbCoursEtudiant(Etudiant e){
-	cout << getCoursAt(0).getNomCours() << endl;
-	cout << getCoursAt(0).getTailleListePrincipale() << endl;
-}*/
+vector<Cours> Modele::getListeCoursEtudiant(Etudiant e){
+	cout << "L'etudiant " << e.getPrenom() << " est inscrit(e) au(x) cour(s) suivant : \n" << endl;
+	vector<Cours> *listeCoursEtudiant = new vector<Cours>();
+	for (unsigned i = 0; i < listeCours.size(); i++){
+		for (int j = 0; j < getCoursAt(i).getTailleListePrincipale(); j++){
+			if (getCoursAt(i).getEtudiant(j).getNom() == e.getNom()){
+				listeCoursEtudiant->push_back(getCoursAt(i));
+				cout << getCoursAt(i).getNomCours() << endl;
+			}
+		}
+	}
+	cout << "\n" << endl;
+	return *listeCoursEtudiant;
+}
+
+

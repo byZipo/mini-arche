@@ -44,7 +44,8 @@ int main(){
 
 	cout << "Nombre de cours ou " << e1->getPrenom() << " est inscrit(e) : " << m->getNbCoursEtudiant(*e1) << "\n" << endl;
 
-	cout << "CA MARCHE BAAAAAAAAAABBBBBBBBEEEEEEEEEEEEEE !!!!!!!!!! \n" << endl;
+	m->getListeCoursEtudiant(*e1);
+
 
 	//m->supprimerCours(*c);
 	//cout << "Cours " + m->getCoursAt(0).getNomCours() + " de la liste" << endl;
