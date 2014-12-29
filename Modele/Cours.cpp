@@ -92,6 +92,10 @@ string Cours::getTypeRes(Ressource *r){
 	return r->getType();
 }
 
+vector<Etudiant> Cours::getListeEtudiant(){
+	return *listeprincipale;
+
+}
 string Cours::getNomCours(){
 	return nomC;
 }

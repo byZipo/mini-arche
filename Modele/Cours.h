@@ -36,6 +36,7 @@ public :
 	Ressource* Cours::getRessource(int i);
 	string Cours::getTypeRes(Ressource *r);
 	vector<Ressource*> Cours::getAllRessource();
+	vector<Etudiant> Cours::getListeEtudiant();
 private:
 	
 	string nomC;
