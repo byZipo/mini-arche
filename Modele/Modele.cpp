@@ -3,11 +3,12 @@
 
 using namespace std;
 
-void Modele::getListeCours(){
+vector<Cours> Modele::getListeCours(){
 	printf("Les cours disponible sur Arche sont :\n");
-	for (unsigned i = 0; i < listeCours.size(); i++){
-		cout << getCoursAt(i).getNomCours() << endl;
-	}
+	//for (unsigned i = 0; i < listeCours.size(); i++){
+		//cout << getCoursAt(i).getNomCours() << endl;
+	//}
+	return listeCours;
 }
 
 Cours Modele::getCoursAt(int i){
@@ -28,6 +29,16 @@ bool Modele::estDisponible(string nom){
 	return dispo;
 }
 	
+Cours Modele::getCours(string nom){
+	unsigned int i = 0;
+	for (i = 0; i<listeCours.size(); i++){
+		if (listeCours.at(i).getNomCours().compare(nom) == 0){
+			return listeCours.at(i);	
+		}
+	}
+	
+}
+
 bool Modele::verifUrlValide(string url){
 	if (!url.empty()){
 
@@ -63,22 +74,44 @@ void Modele::supprimerCours(Cours c){
 	listeCours.erase(listeCours.begin() + deleted);
 }
 
-Professeur Modele::getProfesseur(string nom, string prenom){
+Professeur Modele::getProfesseur(string nom){
 	for (unsigned i= 0; i<profs.size(); i++){
-		if (profs.at(i).getNom() == nom && profs.at(i).getPrenom() == prenom){
+		if (profs.at(i).getNom() == nom){
 			return profs.at(i);
 		}
 	}
 }
 
-bool Modele::estProfesseur(){
-	// Tester si est un prof ou est un eleve ou existe pas
-	return 0;
+bool Modele::estProfesseur(string nom){
+		unsigned int i = 0;
+		for (i = 0; i<profs.size(); i++){
+			if (profs.at(i).getNom().compare(nom) == 0){
+				return true;
+			}
+		}
+	return false;
 }
 
-Etudiant Modele::getEtudiant(string nom, string prenom){
+
+
+
+bool Modele::estEtudiant(string nom){
+	unsigned int i = 0;
+	for (i = 0; i<etudiants.size(); i++){
+		if (etudiants.at(i).getNom().compare(nom) == 0){
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+
+
+Etudiant Modele::getEtudiant(string nom){
 	for (unsigned i = 0; i<etudiants.size(); i++){
-		if (etudiants.at(i).getNom() == nom && etudiants.at(i).getPrenom() == prenom){
+		if (etudiants.at(i).getNom() == nom){
 			return etudiants.at(i);
 		}
 	}
@@ -164,4 +197,14 @@ string Modele::getDateDuJour(){
 	string s = to_string(d) + "/" + to_string(m) + "/" + to_string(y);
 	return s;
 	//printf("%2.2d / %2.2d / %4.4d \n", Today.tm_mday, Today.tm_mon + 1, Today.tm_year + 1900);
+}
+
+
+
+void Modele::ajouterProf(Professeur prof){
+	profs.push_back(prof);
+}
+
+void Modele::ajouterEtudiant(Etudiant etu){
+	etudiants.push_back(etu);
 }

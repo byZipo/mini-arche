@@ -35,18 +35,23 @@ public :
 	bool Modele::verifPDFValide(string chemin);
 	bool Modele::verifDevoirValide(string chemin);
 	bool Modele::ListePrincipaleDisponible(Cours c);
-	Professeur Modele::getProfesseur(string nom, string prenom);
-	Etudiant Modele::getEtudiant(string nom, string prenom);
-	bool Modele::estProfesseur();
+	Professeur Modele::getProfesseur(string nom);
+	Etudiant Modele::getEtudiant(string nom);
+	bool Modele::estProfesseur(string nom);
 	bool Modele::estMemeCours(Cours c, Cours c2);
 	void supprimerCours(Cours c);
 	Cours Modele::getCoursAt(int i);
-	void Modele::getListeCours();
+	vector<Cours> Modele::getListeCours();
 	string Modele::donneExtension(string str);
 	bool Modele::existenceFichier(const string& Name);
 	int Modele::getNbCoursEtudiant(Etudiant e);
 	vector<Cours> Modele::getListeCoursEtudiant(Etudiant e);
 	string Modele::getDateDuJour();
+	Cours Modele::getCours(string nom);
+	void Modele::ajouterProf(Professeur prof);
+	void Modele::ajouterEtudiant(Etudiant etu);
+	bool Modele::estEtudiant(string nom);
+
 };
 
 #endif
