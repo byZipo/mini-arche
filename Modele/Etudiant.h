@@ -12,10 +12,8 @@ using namespace std;
 
 class Etudiant : public Personne{
 
-
 public:
-	//vector<Cours> listeetu;
+	Etudiant(string, string);
 
 };
-
 #endif

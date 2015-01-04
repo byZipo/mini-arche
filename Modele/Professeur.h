@@ -12,6 +12,9 @@ using namespace std;
 
 class Professeur: public Personne{
 	
+public:
+	Professeur(string, string);
+
 };
 
 #endif
