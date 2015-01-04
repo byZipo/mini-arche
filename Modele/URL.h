@@ -13,8 +13,8 @@ using namespace std;
 class URL : public Ressource{
 
 public:
-	virtual string getType();
 	URL(string, string);
+	virtual string getType();
 private :
 	string url;
 	string nom;

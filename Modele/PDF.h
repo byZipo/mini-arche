@@ -13,6 +13,7 @@ using namespace std;
 class PDF : public Ressource{
 
 public:
+	PDF(string, string);
 	virtual string getType();
 private:
 	string chemin;
