@@ -9,6 +9,7 @@ int main(){
 	Cours *c3 = new Cours("SVT", 16);
 	Etudiant *e1 = new Etudiant("DOUVILLE","Coralie","mdp");
 	Etudiant *e2 = new Etudiant("JEANNEROT","Adrien","mdp");
+	Professeur *prof = new Professeur("SOKOLOV", "Dimitri", "mdp");
 
 	/*
 	URL *urls = new URL("www.google.fr", "google");

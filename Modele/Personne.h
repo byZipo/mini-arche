@@ -23,6 +23,7 @@ public :
 	string Personne::getPrenom();
 	void Personne::setPrenom(string chaine);
 	void Personne::setMotDePasse(string chaine);
+	string Personne::getMotDePasse();
 };
 
 #endif

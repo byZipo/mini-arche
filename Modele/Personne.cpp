@@ -22,3 +22,7 @@ void Personne::setPrenom(string chaine){
 void Personne::setMotDePasse(string chaine){
 	motdepasse = chaine;
 }
+
+string Personne::getMotDePasse(){
+	return motdepasse;
+}
