@@ -7,25 +7,24 @@ int main(){
 	Cours *c1 = new Cours("Maths", 15);
 	Cours *c2 = new Cours("Physique", 17);
 	Cours *c3 = new Cours("SVT", 16);
-	Etudiant *e1 = new Etudiant();
-	Etudiant *e2 = new Etudiant();
+	Etudiant *e1 = new Etudiant("DOUVILLE","Coralie","mdp");
+	Etudiant *e2 = new Etudiant("JEANNEROT","Adrien","mdp");
+
+	/*
 	URL *urls = new URL("www.google.fr", "google");
 	c1->addRessources(urls);
 	cout << "Type ressource : " << c1->getTypeRes(c1->getRessource(0)) << endl;
+	*/
+
 	m->ajouterCours(*c1);
 	m->ajouterCours(*c2);
 	m->ajouterCours(*c3);
 
 	m->getListeCours();
 
-	e1->setPrenom("Coralie dit la soumise");
-	e1->setNom("DOUVILLE");
-
-	e2->setPrenom("Adrien dit le BOGOSS");
-	e2->setNom("JAJA");
-
 	cout << "\nTest sur l'etudiant " << e1->getPrenom() << "\n" << endl;
 
+	c1->addEtudiantListePrincipale(*e1);
 	c1->addEtudiantListePrincipale(*e1);
 	cout << "Etudiant inscrit au cours de " << c1->getNomCours() << " : " << c1->getEtudiant(0).getPrenom() << endl;
 	cout << "Taile de la liste principale du cours de " << c1->getNomCours() << " : " << c1->getTailleListePrincipale() << "\n" << endl;

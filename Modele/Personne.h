@@ -14,6 +14,7 @@ class Personne{
 private :
 	string nom;
 	string prenom;
+	string motdepasse;
 
 	
 public :
@@ -21,6 +22,7 @@ public :
 	void Personne::setNom(string chaine);
 	string Personne::getPrenom();
 	void Personne::setPrenom(string chaine);
+	void Personne::setMotDePasse(string chaine);
 };
 
 #endif

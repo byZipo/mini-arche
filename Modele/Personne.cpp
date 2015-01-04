@@ -18,3 +18,7 @@ string Personne::getPrenom(){
 void Personne::setPrenom(string chaine){
 	prenom = chaine;	
 }
+
+void Personne::setMotDePasse(string chaine){
+	motdepasse = chaine;
+}

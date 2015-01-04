@@ -3,7 +3,8 @@
 
 using namespace std;
 
-Professeur::Professeur(string nom, string prenom){
+Professeur::Professeur(string nom, string prenom, string mdp){
 	this->setNom(nom);
 	this->setPrenom(prenom);
+	this->setMotDePasse(mdp);
 }

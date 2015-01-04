@@ -3,7 +3,8 @@
 
 using namespace std;
 
-Etudiant::Etudiant(string nom, string prenom){
+Etudiant::Etudiant(string nom, string prenom, string mdp){
 	this->setNom(nom);
 	this->setPrenom(prenom);
+	this->setMotDePasse(mdp);
 }

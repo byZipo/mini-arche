@@ -13,7 +13,7 @@ using namespace std;
 class Etudiant : public Personne{
 
 public:
-	Etudiant(string, string);
+	Etudiant(string, string, string);
 
 };
 #endif
