@@ -9,15 +9,32 @@ Cours::Cours(string nom, int nbetu){
 	this->nomC = nom;
 	this->nbEtuMax = nbetu;
 	this->listeprincipale = new vector<Etudiant>();
+	this->listeattente = new vector<Etudiant>();
 	this->ressources = new vector<Ressource*>();
 }
 
 void Cours::addEtudiantListePrincipale(Etudiant e){
-	listeprincipale->push_back(e);
+	bool aux = true;
+	for (unsigned i = 0; i < listeprincipale->size(); i++){
+		if (estMemeEtudiant(listeprincipale->at(i), e)){
+			aux = false;
+		}
+	}
+	if (aux == true){
+		listeprincipale->push_back(e);
+	}
 }
 
 void Cours::addEtudiantListeAttente(Etudiant e){
-	listeattente.push_back(e);
+	bool aux = true;
+	for (unsigned i = 0; i < listeattente->size(); i++){
+		if (estMemeEtudiant(listeattente->at(i), e)){
+			aux = false;
+		}
+	}
+	if (aux == true){
+		listeattente->push_back(e);
+	}
 }
 
 Etudiant Cours::getEtudiant(int i){
@@ -35,9 +52,9 @@ bool Cours::estMemeEtudiant(Etudiant c, Etudiant c2){
 
 void Cours::supprimerEtudiant(Etudiant e){
 	
-	for (unsigned i = 0; i < listeattente.size(); i++){
-		if (estMemeEtudiant(listeattente.at(i), e)){
-			listeattente.erase(listeattente.begin() + i);
+	for (unsigned i = 0; i < listeattente->size(); i++){
+		if (estMemeEtudiant(listeattente->at(i), e)){
+			listeattente->erase(listeattente->begin() + i);
 		}
 	}
 	for (unsigned i = 0; i < listeprincipale->size(); i++){
