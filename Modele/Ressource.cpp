@@ -6,6 +6,11 @@ using namespace std;
 int note;
 bool publication;
 
+Ressource::Ressource(string nom, string type){
+	this->type = type;
+	this->nom = nom;
+}
+
 bool Ressource::contientnote(){
 	if (note){
 		return true;
