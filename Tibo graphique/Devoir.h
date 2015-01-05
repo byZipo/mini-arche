@@ -13,7 +13,7 @@ using namespace std;
 class Devoir : public Ressource{
 
 public:
-	Devoir(string, string);
+	//Devoir(string, string);
 	virtual std::string getType();
 private :
 	std::string chemin;

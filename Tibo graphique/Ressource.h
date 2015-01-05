@@ -17,7 +17,7 @@ protected :
 	string type;
 	string nom;
 public :
-	Ressource(string, string);
+	Ressource::Ressource(string, string);
 	bool contientnote();
 	string getNom();
 	bool estpubliee();
