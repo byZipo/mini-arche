@@ -85,37 +85,37 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Controle.h" />
-    <ClInclude Include="Cours.h" />
-    <ClInclude Include="Devoir.h" />
-    <ClInclude Include="Etudiant.h" />
-    <ClInclude Include="Modele.h" />
-    <ClInclude Include="PDF.h" />
-    <ClInclude Include="Personne.h" />
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Administrateur.h" />
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Controle.h" />
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Cours.h" />
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Devoir.h" />
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Etudiant.h" />
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\PDF.h" />
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Personne.h" />
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Professeur.h" />
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Ressource.h" />
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\URL.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="Ressource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Test1.h" />
-    <ClInclude Include="URL.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Administrateur.cpp" />
-    <ClCompile Include="Controle.cpp" />
-    <ClCompile Include="Cours.cpp" />
-    <ClCompile Include="Devoir.cpp" />
-    <ClCompile Include="Etudiant.cpp" />
-    <ClCompile Include="Modele.cpp" />
-    <ClCompile Include="PDF.cpp" />
-    <ClCompile Include="Personne.cpp" />
-    <ClCompile Include="Professeur.cpp" />
-    <ClCompile Include="Ressource.cpp" />
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Administrateur.cpp" />
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Controle.cpp" />
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Cours.cpp" />
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Devoir.cpp" />
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Etudiant.cpp" />
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\PDF.cpp" />
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Personne.cpp" />
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Professeur.cpp" />
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Ressource.cpp" />
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\URL.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="mini-arche.cpp" />
-    <ClCompile Include="URL.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Test1.rc" />

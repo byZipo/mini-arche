@@ -1,5 +1,5 @@
-#ifndef URL_H
-#define URL_H
+#ifndef PDF_H
+#define PDF_H
 
 //Libraires
 #include <iostream>
@@ -10,16 +10,14 @@
 
 using namespace std;
 
-class URL : public Ressource{
+class PDF : public Ressource{
 
 public:
-	//URL(string, string);
+	PDF(string, string);
 	virtual string getType();
-private :
-	string url;
+private:
+	string chemin;
 	string nom;
-
-	
 };
 
 #endif

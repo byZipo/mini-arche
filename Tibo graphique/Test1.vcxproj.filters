@@ -30,31 +30,34 @@
     <ClInclude Include="Test1.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Modele.h">
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Controle.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Etudiant.h">
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Cours.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Cours.h">
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Devoir.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Controle.h">
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Etudiant.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Devoir.h">
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\PDF.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="PDF.h">
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Personne.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Personne.h">
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Professeur.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Ressource.h">
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Ressource.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="URL.h">
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\URL.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Administrateur.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,40 +65,37 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Etudiant.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
     <ClCompile Include="mini-arche.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Modele.cpp">
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Administrateur.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Etudiant.cpp">
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Controle.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Cours.cpp">
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Ressource.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Administrateur.cpp">
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\URL.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Controle.cpp">
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Cours.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Devoir.cpp">
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Devoir.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="PDF.cpp">
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\PDF.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Personne.cpp">
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Personne.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Professeur.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Ressource.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="URL.cpp">
+    <ClCompile Include="..\..\..\..\Licence\L3-s5\CPOA\mini-arche\mini-arche\Modele\Professeur.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
